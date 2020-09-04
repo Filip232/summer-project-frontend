@@ -32,46 +32,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.console {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  $fontSize: 1.6rem;
-  font-weight: normal;
-  font-family: monospace;
-  background-color: #fff;
-
-  &__textarea {
-    flex-grow: 1;
-  }
-
-  &__input {
-    width: 100%;
-    font-size: $fontSize;
-    font-family: inherit;
-  }
-
-  &__prompt-wrapper {
-    position: absolute;
-    bottom: 2px;
-    color: transparent;
-    user-select: none;
-    pointer-events: none;
-    width: 100%;
-    font-size: $fontSize;
-  }
-
-  &__prompt {
-    color: #000;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .console {
-    background-color: #111;
-    color: #fff;
-  }
-}
-
-</style>
+<style lang="scss" scoped src="./Home.scss"></style>
