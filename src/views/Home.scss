@@ -15,17 +15,17 @@ $colorSecondary: #000;
 
   
     &__textarea {
-      border: none;
-      flex-grow: 1;
-      resize: none;
-      border: none;
-      background-color: $colorPrimary;
-      box-shadow: none;
+        border: none;
+        flex-grow: 1;
+        resize: none;
+        border: none;
+        background-color: $colorPrimary;
+        box-shadow: none;
     }
 
     &_textarea:focus{
-      outline: none;
-      border: none;
+        outline: none;
+        border: none;
     }
   
     &__input {
@@ -39,44 +39,48 @@ $colorSecondary: #000;
     }
 
     &__input:focus{
-      outline: none;
-      border: none;
+        outline: none;
+        border: none;
     }
   
     &__prompt-wrapper {
-      position: absolute;
-      bottom: 2px;
-      color: transparent;
-      user-select: none;
-      pointer-events: none;
-      width: 100%;
-      font-size: $fontSize;
-      background-color: $colorPrimary;
+        position: absolute;
+        bottom: 2px;
+        color: transparent;
+        user-select: none;
+        pointer-events: none;
+        width: 100%;
+        font-size: $fontSize;
+        background-color: $colorPrimary;
     }
   
     &__prompt {
-      color: $colorSecondary;
+        color: $colorSecondary;
     }
 }
   
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     .console {
-      background-color: $colorSecondary;
-      color: $colorPrimary;
+        background-color: $colorSecondary;
+        color: $colorPrimary;
 
-      &__textarea {
-        background-color: $colorSecondary;
-        color: $colorPrimary;
-      }
-    
-      &__input {
-        background-color: $colorSecondary;
-        color: $colorPrimary;
-      }
-    
-      &__prompt-wrapper {
-        background-color: $colorSecondary;
-        color: $colorPrimary;
-      }
+        &__textarea {
+            background-color: $colorSecondary;
+            color: $colorPrimary;
+        }
+
+        &__input {
+            background-color: $colorSecondary;
+            color: $colorPrimary;
+        }
+
+        &__prompt-wrapper {
+            background-color: $colorSecondary;
+            color: $colorPrimary;
+        }
+
+        &__prompt {
+            color: $colorPrimary;
+        }
     }
-  }
+}
