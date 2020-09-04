@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 $colorPrimary: #000;
+=======
+$colorPrimary: #fff;
+$colorSecondary: #000;
+
+>>>>>>> e2365832b80eaf6268ee46413bbfb1b8c4282e2e
 .console {
     height: calc(100vh - (1.6rem));
     display: flex;
@@ -8,18 +14,22 @@ $colorPrimary: #000;
     $fontSize: 1.6rem;
     font-weight: normal;
     font-family: monospace;
-    background-color: #111;
+    background-color: $colorPrimary;
     padding: 0;
-    
 
+  
     &__textarea {
       border: none;
       flex-grow: 1;
+      resize: none;
+      border: none;
+      background-color: $colorPrimary;
       box-shadow: none;
-      pointer-events: none;
     }
+
     &_textarea:focus{
       outline: none;
+      border: none;
     }
   
     &__input {
@@ -27,8 +37,10 @@ $colorPrimary: #000;
       width: 100%;
       font-size: $fontSize;
       font-family: inherit;
+      background-color: $colorPrimary;
+      color: $colorSecondary
     }
-    
+
     &__input:focus{
       outline: none;
       border: none;
@@ -42,21 +54,32 @@ $colorPrimary: #000;
       pointer-events: none;
       width: 100%;
       font-size: $fontSize;
+      background-color: $colorPrimary;
     }
   
     &__prompt {
-      color: #000;
+      color: $colorSecondary;
     }
-  }
-
-  .console:focus{
-    outline: none;
-  }
+}
   
   @media (prefers-color-scheme: dark) {
     .console {
-      background-color: #111;
-      color: #fff;
+      background-color: $colorSecondary;
+      color: $colorPrimary;
+
+      &__textarea {
+        background-color: $colorSecondary;
+        color: $colorPrimary;
+      }
+    
+      &__input {
+        background-color: $colorSecondary;
+        color: $colorPrimary;
+      }
+    
+      &__prompt-wrapper {
+        background-color: $colorSecondary;
+        color: $colorPrimary;
+      }
     }
   }
-  
