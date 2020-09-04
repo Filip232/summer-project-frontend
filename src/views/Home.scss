@@ -45,13 +45,16 @@
       font-family: inherit;
     }
 
-    &_input:focus{
+    &__input:focus{
       outline: none;
       border: none;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       -webkit-appearance: none;
 >>>>>>> 2fb8b24393f457bcb1f14eceb3c4eff4dcaa2898
+=======
+>>>>>>> 519d10de4022273cdbd109140bc559dad0d3cf05
     }
   
     &__prompt-wrapper {
