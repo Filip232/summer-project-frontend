@@ -13,10 +13,10 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: 'Login',
-        component: Login,
+        name: 'Home',
+        component: Home,
         meta: {
-            requiresAuthorisation: true,
+            requiresAuthorisation: false,
             isBack: false
         }
     },
@@ -70,11 +70,11 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    if ((storage.state.activeUser.id !== -1) && to.meta.requiresAuthorisation) {
-        return next('/home');
-    }else if(storage.state.activeUser.id === -1 && !to.meta.requiresAuthorisation){
-        return next('/');
-    }
+    // if ((storage.state.activeUser.id !== -1) && to.meta.requiresAuthorisation) {
+    //     return next('/home');
+    // }else if(storage.state.activeUser.id === -1 && !to.meta.requiresAuthorisation){
+    //     return next('/');
+    // }
     return next();
 })
 
