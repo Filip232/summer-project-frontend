@@ -10,27 +10,22 @@ $colorSecondary: #000;
     $fontSize: 1.6rem;
     font-weight: normal;
     font-family: monospace;
-<<<<<<< HEAD
     background-color: $colorPrimary;
-=======
-    background-color: #111;
     padding: 0;
 
->>>>>>> 7c0682dd6f15db2ab1c090ad68b3abe7741b52ea
   
     &__textarea {
       border: none;
       flex-grow: 1;
-<<<<<<< HEAD
       resize: none;
       border: none;
       background-color: $colorPrimary;
-=======
       box-shadow: none;
     }
+
     &_textarea:focus{
       outline: none;
->>>>>>> 7c0682dd6f15db2ab1c090ad68b3abe7741b52ea
+      border: none;
     }
   
     &__input {
@@ -40,8 +35,11 @@ $colorSecondary: #000;
       font-family: inherit;
       background-color: $colorPrimary;
     }
+
     &_input:focus{
       outline: none;
+      border: none;
+      -webkit-appearance: none;
     }
   
     &__prompt-wrapper {
@@ -58,15 +56,7 @@ $colorSecondary: #000;
     &__prompt {
       color: $colorSecondary;
     }
-<<<<<<< HEAD
 }
-=======
-  }
-
-  .console:focus{
-    outline: none;
-  }
->>>>>>> 7c0682dd6f15db2ab1c090ad68b3abe7741b52ea
   
   @media (prefers-color-scheme: dark) {
     .console {
