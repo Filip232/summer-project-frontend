@@ -36,10 +36,9 @@ $colorSecondary: #000;
       background-color: $colorPrimary;
     }
 
-    &_input:focus{
+    &__input:focus{
       outline: none;
       border: none;
-      -webkit-appearance: none;
     }
   
     &__prompt-wrapper {
