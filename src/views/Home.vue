@@ -40,6 +40,7 @@ export default {
   $fontSize: 1.6rem;
   font-weight: normal;
   font-family: monospace;
+  background-color: #111;
 
   &__textarea {
     flex-grow: 1;
@@ -65,4 +66,12 @@ export default {
     color: #000;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .console {
+    background-color: #111;
+    color: #fff;
+  }
+}
+
 </style>
