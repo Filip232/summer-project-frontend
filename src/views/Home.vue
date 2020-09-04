@@ -1,17 +1,4 @@
-<template>
-  <div class="console">
-    <textarea class="console__textarea" readonly>
-      H@c1SH 0$ [Version 10.0.18363.1016]
-      (c) 2020 IT komórka Grupy Groboczej. All rights reserved.
-    </textarea>
-    <div>
-      <input class="console__input" type="text" v-model="consoleInput" autofocus>
-      <div class="console__prompt-wrapper">
-        {{consoleInput}}<span class="console__prompt">|</span>
-      </div>
-    </div>
-  </div>
-
+<template src="./Home.html">
 </template>
 
 <script lang="ts">
@@ -32,4 +19,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped src="./Home.scss"></style>

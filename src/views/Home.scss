@@ -3,19 +3,31 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    border: none;
     $fontSize: 1.6rem;
     font-weight: normal;
     font-family: monospace;
     background-color: #111;
+    padding: 0;
+
   
     &__textarea {
+      border: none;
       flex-grow: 1;
+      box-shadow: none;
+    }
+    &_textarea:focus{
+      outline: none;
     }
   
     &__input {
+      border: none;
       width: 100%;
       font-size: $fontSize;
       font-family: inherit;
+    }
+    &_input:focus{
+      outline: none;
     }
   
     &__prompt-wrapper {
@@ -31,6 +43,10 @@
     &__prompt {
       color: #000;
     }
+  }
+
+  .console:focus{
+    outline: none;
   }
   
   @media (prefers-color-scheme: dark) {
