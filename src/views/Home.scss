@@ -34,7 +34,7 @@ $colorSecondary: #000;
       font-size: $fontSize;
       font-family: inherit;
       background-color: $colorPrimary;
-      color: $colorSecondary
+      color: $colorSecondary;
     }
 
     &__input:focus{
@@ -79,3 +79,4 @@ $colorSecondary: #000;
       }
     }
   }
+
