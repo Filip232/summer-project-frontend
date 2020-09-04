@@ -30,7 +30,7 @@ $colorSecondary: #000;
   
     &__input {
       border: none;
-      width: 100%;
+      width: 60%;
       font-size: $fontSize;
       font-family: inherit;
       background-color: $colorPrimary;
@@ -42,6 +42,10 @@ $colorSecondary: #000;
         outline: none;
         border: none;
     }
+
+    &__user{
+      color: #fff;
+    }
   
     &__prompt-wrapper {
         position: absolute;
@@ -49,7 +53,8 @@ $colorSecondary: #000;
         color: transparent;
         user-select: none;
         pointer-events: none;
-        width: 100%;
+        width: 90%;
+        margin-left: 10%;
         font-size: $fontSize;
         background-color: $colorPrimary;
     }
@@ -70,8 +75,8 @@ $colorSecondary: #000;
         }
 
         &__input {
+            color: transparent;
             background-color: $colorSecondary;
-            color: $colorPrimary;
         }
 
         &__prompt-wrapper {
@@ -83,4 +88,11 @@ $colorSecondary: #000;
             color: $colorPrimary;
         }
     }
+}
+
+.d-flex{
+  display: flex;
+}
+.flex-row{
+  flex-direction: row;
 }

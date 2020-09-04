@@ -3,8 +3,10 @@
         H@c1SH 0$ [Version 10.0.18363.1016]
         (c) 2020 IT komórka Grupy Groboczej. All rights reserved.
     </textarea>
-    <div>
-        <em class="console__user">C:\User</em>
+    <div class="d-flex flex-row">
+        <div class="console__user">
+            <span class="console__user-sign">C:\User</span>
+        </div>
         <input class="console__input" type="text" v-model="consoleInput" autofocus aria-disabled="true">
         <div class="console__prompt-wrapper">
             {{consoleInput}}<span class="console__prompt">|</span>
