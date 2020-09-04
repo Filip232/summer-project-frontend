@@ -7,6 +7,7 @@
     $fontSize: 1.6rem;
     font-weight: normal;
     font-family: monospace;
+<<<<<<< HEAD
     background-color: #111;
     padding: 0;
 
@@ -14,10 +15,27 @@
     &__textarea {
       border: none;
       flex-grow: 1;
+=======
+    background-color: $colorPrimary;
+    padding: 0;
+
+  
+    &__textarea {
+      border: none;
+      flex-grow: 1;
+      resize: none;
+      border: none;
+      background-color: $colorPrimary;
+>>>>>>> 2fb8b24393f457bcb1f14eceb3c4eff4dcaa2898
       box-shadow: none;
     }
+
     &_textarea:focus{
       outline: none;
+<<<<<<< HEAD
+=======
+      border: none;
+>>>>>>> 2fb8b24393f457bcb1f14eceb3c4eff4dcaa2898
     }
   
     &__input {
@@ -26,9 +44,14 @@
       font-size: $fontSize;
       font-family: inherit;
     }
+
     &_input:focus{
       outline: none;
       border: none;
+<<<<<<< HEAD
+=======
+      -webkit-appearance: none;
+>>>>>>> 2fb8b24393f457bcb1f14eceb3c4eff4dcaa2898
     }
   
     &__prompt-wrapper {
@@ -44,11 +67,15 @@
     &__prompt {
       color: #000;
     }
+<<<<<<< HEAD
   }
 
   .console:focus{
     outline: none;
   }
+=======
+}
+>>>>>>> 2fb8b24393f457bcb1f14eceb3c4eff4dcaa2898
   
   @media (prefers-color-scheme: dark) {
     .console {
