@@ -30,7 +30,7 @@ $colorSecondary: #000;
   
     &__input {
       border: none;
-      width: 60%;
+      width: 100%;
       font-size: $fontSize;
       font-family: inherit;
       background-color: $colorPrimary;
@@ -45,6 +45,7 @@ $colorSecondary: #000;
 
     &__user{
       color: #fff;
+      font-size: 1.6rem;
     }
   
     &__prompt-wrapper {
@@ -53,8 +54,8 @@ $colorSecondary: #000;
         color: transparent;
         user-select: none;
         pointer-events: none;
-        width: 90%;
-        margin-left: 10%;
+        width: 92%;
+        margin-left: 8%;
         font-size: $fontSize;
         background-color: $colorPrimary;
     }
