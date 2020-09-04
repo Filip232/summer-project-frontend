@@ -2,7 +2,7 @@ $colorPrimary: #fff;
 $colorSecondary: #000;
 
 .console {
-    height: calc(100vh - (1.6rem));
+    height: 100vh;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -29,12 +29,13 @@ $colorSecondary: #000;
     }
   
     &__input {
-        border: none;
-        width: 100%;
-        font-size: $fontSize;
-        font-family: inherit;
-        background-color: $colorPrimary;
-        color: $colorSecondary;
+      border: none;
+      width: 100%;
+      font-size: $fontSize;
+      font-family: inherit;
+      background-color: $colorPrimary;
+      color: $colorSecondary;
+      padding: 1px 0;
     }
 
     &__input:focus{
