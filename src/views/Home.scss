@@ -34,6 +34,7 @@ $colorSecondary: #000;
       font-size: $fontSize;
       font-family: inherit;
       background-color: $colorPrimary;
+      color: $colorSecondary
     }
 
     &__input:focus{
