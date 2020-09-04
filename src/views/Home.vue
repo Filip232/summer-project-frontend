@@ -34,6 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .console {
+  height: calc(100vh - (1.6rem));
   display: flex;
   position: relative;
   flex-direction: column;
@@ -41,12 +42,16 @@ export default {
   font-weight: normal;
   font-family: monospace;
   background-color: #fff;
+  padding: 0;
+  border: 0;
 
   &__textarea {
     flex-grow: 1;
   }
 
   &__input {
+    border: 0;
+    padding: 1px 0;
     width: 100%;
     font-size: $fontSize;
     font-family: inherit;
@@ -66,12 +71,4 @@ export default {
     color: #000;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .console {
-    background-color: #111;
-    color: #fff;
-  }
-}
-
 </style>
