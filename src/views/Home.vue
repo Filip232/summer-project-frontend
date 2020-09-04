@@ -34,21 +34,19 @@ export default {
 
 <style lang="scss" scoped>
 .console {
-  height: calc(100vh - (1.6rem + 2px));
   display: flex;
   position: relative;
   flex-direction: column;
   $fontSize: 1.6rem;
   font-weight: normal;
   font-family: monospace;
-  background-color: #111;
+  background-color: #fff;
 
   &__textarea {
     flex-grow: 1;
   }
 
   &__input {
-
     width: 100%;
     font-size: $fontSize;
     font-family: inherit;
