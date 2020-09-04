@@ -4,11 +4,14 @@
       H@c1SH 0$ [Version 10.0.18363.1016]
       (c) 2020 IT komórka Grupy Groboczej. All rights reserved.
     </textarea>
-    <input class="console__input" type="text" v-model="consoleInput" autofocus>
-    <div class="console__prompt-wrapper">
-      {{consoleInput}}<span class="console__prompt">|</span>
+    <div>
+      <input class="console__input" type="text" v-model="consoleInput" autofocus>
+      <div class="console__prompt-wrapper">
+        {{consoleInput}}<span class="console__prompt">|</span>
+      </div>
     </div>
   </div>
+
 </template>
 
 <script lang="ts">
@@ -32,8 +35,8 @@ export default {
 <style lang="scss" scoped>
 .console {
   display: flex;
+  position: relative;
   flex-direction: column;
-  height: 100vh;
   $fontSize: 1.6rem;
   font-weight: normal;
   font-family: monospace;
