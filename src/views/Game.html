@@ -23,7 +23,7 @@
                 Start game
             </button>
         </div>
-        <div v-else>
+        <div class="waitpanel" v-else>
             Wait for owner to start game
         </div>
     </div>
@@ -52,7 +52,7 @@
             </button>
             <div v-if="isNavigationActive" class="navigation">
                 <ul class="navigation-list">
-                    <li v-for="player in game.players" :key="player.index">
+                    <li class="navigation-list--listElement" v-for="player in game.players" :key="player.index">
                         {{player.points}}
                         {{player.user.name}}
                     </li>
