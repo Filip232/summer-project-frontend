@@ -17,10 +17,18 @@ $fontSize: 1.6rem;
   height: 90vh;
   width: 90vw;
   position: relative;
+  background-color: #555555;
 }
 
 .userMesseageBox{
+  border-radius: 2px;
   padding: 10px;
-  background-color: #42b983;
+  background-color: #fffb04;
   position: absolute;
+  color: #ffffff;
+}
+
+.userMesseageBox h4{
+  color: inherit;
+  text-align: center;
 }
