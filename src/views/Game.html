@@ -28,12 +28,12 @@
             </ul>
         </div>
         <form @submit.prevent="sendMesseage" class="sendMessageBox">
-            <button type="button" class="hamburger">
-                <span class="hamburger--box">
+            <button type="button" class="hamburger" @click="showHideHamburger">
+                <span class="hamburger--box" >
                     <span class="hamburger--inner"></span>
                 </span>
             </button>
-            <div class="navigation">
+            <div v-if="this.isHamburgerActive" class="navigation">
                 <ul class="navigation-list">
                     <li>
                         <p>tekst</p>
