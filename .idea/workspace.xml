@@ -11,13 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad8d6f1-a47f-4b83-93fd-5c5e16c98cef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/Game.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Game.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/game.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/game.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/game.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/projects/kosztorysy" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -118,7 +119,8 @@
       <workItem from="1598645442143" duration="217000" />
       <workItem from="1598858243944" duration="12726000" />
       <workItem from="1598903867560" duration="53000" />
-      <workItem from="1599230039580" duration="16133000" />
+      <workItem from="1599230039580" duration="19872000" />
+      <workItem from="1599308037232" duration="4011000" />
     </task>
     <servers />
   </component>
@@ -142,14 +144,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597928832230" />
-    <state x="726" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596530313040">
+    <state x="726" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599306489100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="726" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596530313040" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598903918393">
+    <state x="726" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599306489100" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1599305542660">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598903918393" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599305542660" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1596551784295">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

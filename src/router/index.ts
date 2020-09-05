@@ -22,14 +22,6 @@ const routes = [
         }
     },
     {
-        path: '/home',
-        name: 'Home',
-        component: Home,
-        meta: {
-            isBack: false
-        }
-    },
-    {
         path: '/register',
         name: 'Register',
         component: Register,
@@ -76,12 +68,20 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    // if ((storage.state.activeUser.id !== -1) && to.meta.requiresAuthorisation) {
-    //     return next('/home');
-    // }else if(storage.state.activeUser.id === -1 && !to.meta.requiresAuthorisation){
-    //     return next('/');
-    // }
-    return next();
+    if ((storage.state.user.id === '')) {
+        return storage.dispatch('createUser')
+            .then(() => next());
+    }
+
+    return storage.dispatch('validateUser')
+        .then(validationResult => {
+            if (validationResult) {
+                return next()
+            } else {
+                return storage.dispatch('createUser')
+                    .then(() => next());
+            }
+        })
 })
 
 

@@ -6,13 +6,12 @@
         <div>
             <ul>
                 <li>
-                   {{$store.state.userName}}
+                   {{$store.state.user.name}}
                 </li>
             </ul>
         </div>
         <form @submit.prevent="sendMesseage">
             <input v-model=inputValue type="text">
-            <input type="submit">
         </form>
     </div>
 </div>
