@@ -51,6 +51,10 @@ export default {
         default:
           this.consoleOutput += '\nwrong command';
       }
+      
+      this.$nextTick(() => {
+        this.$refs.consoleOutputElement.scrollTop = this.$refs.consoleOutputElement.scrollHeight;
+      });
     }
   }
 }
