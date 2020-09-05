@@ -73,7 +73,7 @@ $fontSize: 1.6rem;
     }
 
     &__prompt::before{
-      width: 2px;
+      width: 1px;
       height: 100%;
       content: ' ';
       background-color: $colorPrimary;
