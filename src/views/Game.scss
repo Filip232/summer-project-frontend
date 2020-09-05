@@ -60,11 +60,12 @@ $fontSize: 1.6rem;
 .wordGenerator {
   position: absolute;
   z-index: 0;
-  font-size: 4vw;
+  font-size: max(2rem, 4vw);
 }
 
 .wordGenerator span {
   border: thin solid red;
+  font-size: inherit;
   padding: 0 4px;
   margin-right: 7px;
   color: $colorGreyDark;
@@ -73,16 +74,16 @@ $fontSize: 1.6rem;
 .userMesseageBox {
   z-index: 1;
   padding: 10px;
-  font-size: 4vw;
+  font-size: max(1.4rem, 3vw);
   background-color: $colorGreyLightnotest;
   position: absolute;
   color: $colorGreyDark;
-  border-radius: 5px;
+  border-radius: 2px;
   border: thin solid $colorGreyDark;
 }
 
 .userMesseageBox h4 {
-  font-size: max(1.2rem, 3vh);
+  font-size: max(2rem, 3vh);
   color: inherit;
   text-align: center;
 }
