@@ -6,16 +6,15 @@
         </div>
     </div>
     <div>
-        <div>
+        <div class="invisible">
             <ul>
                 <li>
                    {{$store.state.userName}}
                 </li>
             </ul>
         </div>
-        <form @submit.prevent="sendMesseage">
-            <input v-model=inputValue type="text">
-            <input type="submit">
+        <form @submit.prevent="sendMesseage" class="sendMessageBox">
+            <input v-model=inputValue type="text" class="sendMessageBox--sendMessage">
         </form>
     </div>
 </div>
