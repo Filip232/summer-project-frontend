@@ -1,6 +1,6 @@
 <template src="./Home.html"></template>
 
-<script lang="ts">
+<script>
 // @ is an alias to /src
 
 export default {
@@ -15,7 +15,7 @@ export default {
     };
   },
   methods: {
-    onSubmit(this: {consoleInput: string; consoleOutput: string}) {
+    onSubmit() {
       const userInputSplit = this.consoleInput.split(' ');
       this.consoleInput = '';
       switch (userInputSplit[0]){

@@ -3,7 +3,7 @@ $colorSecondary: #000;
 $fontSize: 1.6rem;
 
 .console {
-    height: 100vh;
+    height: 100%;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -70,5 +70,9 @@ $fontSize: 1.6rem;
     .console {
         background-color: $colorSecondary;
         color: $colorPrimary;
+
+        &__prompt {
+            color: $colorPrimary;
+        }
     }
 }
