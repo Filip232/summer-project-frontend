@@ -231,6 +231,7 @@ $fontSize: 1.6rem;
   background-color: $colorGreyLightnotest;;
   transition: transform .3s .1s ease-in-out;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 .navigation-list {
