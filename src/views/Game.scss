@@ -69,6 +69,22 @@ $fontSize: 1.6rem;
   transform: translate(-50%, -50%);
   z-index: 0;
   font-size: max(2rem, 4vw);
+  &--rotate{
+    animation: around2 4s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes around2{
+  0% {
+    transform: rotate(100deg);
+  }
+  49% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(100deg);
+  }
 }
 
 .wordGenerator span {
