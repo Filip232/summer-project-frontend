@@ -12,7 +12,8 @@ export default {
       inputValue: '',
       game: {},
       userMessages: [], // { id: '', text: '', x: 40, y 50 },
-      isNavigationActive: false
+      isNavigationActive: false,
+      userName: ''
     }
   },
   computed: {
@@ -39,6 +40,9 @@ export default {
       Api.fetch('games/' + this.$route.query.id + '/start', {
         method: 'POST'
       })
+    },
+    changeUserName(){
+      this.$store.commit('changeUserName', this.userName);
     },
     async startPolling() {
       const {success, game} = await Api.fetch('games/' + this.$route.query.id + '/updatePoll')
