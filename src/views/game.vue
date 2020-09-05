@@ -29,16 +29,6 @@ export default {
   },
   methods: {
     sendMessage() {
-      let id = Math.random() * 10101010;
-      this.userMessages.push({
-        id: id,
-        text: this.inputValue,
-        x: Math.random() * 90,
-        y: Math.random() * 90,
-        user: {
-          name: this.$store.state.user.name
-        }
-      })
       Api.fetch('games/' + this.$route.query.id + '/messages', {
         method: 'POST',
         body: JSON.stringify( {userId: this.$store.state.user.id, text: this.inputValue })
