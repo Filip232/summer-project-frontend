@@ -59,6 +59,9 @@ $fontSize: 1.6rem;
   
     &__prompt {
         color: $colorSecondary;
+        width: 9px;
+        height: 100%;
+        background-color: $colorSecondary;
     }
 
     &__user {
