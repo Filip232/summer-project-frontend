@@ -51,12 +51,12 @@
             </button>
             <div v-if="isNavigationActive" class="navigation">
                 <ul class="navigation-list">
-                    <li>Players</li>
+                    <li class="navigation-list--player">Players</li>
                     <li class="navigation-list--listElement" v-for="player in game.players" :key="player.index">
                         {{player.points}}
                         {{player.user.name}}
                     </li>
-                    <li>Spectators</li>
+                    <li class="navigation-list--spectator">Spectators</li>
                     <li class="navigation-list--listElement" v-for="player in game.spectators" :key="player.index">
                         {{player.name}}
                     </li>
