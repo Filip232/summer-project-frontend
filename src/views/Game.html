@@ -4,7 +4,7 @@
         <input type="text" v-model="userName">
         <input type="submit" @click="changeUserName">
     </form>
-    <div v-if="game.finished">
+    <div v-if="game.finished" class="gameFinishedMenu">
         <h3>Game won by: {{winner.user.name}}!</h3>
         <ol>
             <li v-for="player in game.players" :key="player.id">
@@ -17,9 +17,16 @@
                 Start next game
             </button>
         </div>
-        <div v-else>
+        <div v-else class="waitNewGame">
             Wait for owner to start new game
         </div>
+        <h3 class="gameFinishedMenu--gameWonPlayer">Game won by: {{winner.user.name}}!</h3>
+        <ol class="gameFinishedMenu--playersPoints">
+            <li v-for="player in game.players" :key="player.id" class="gameFinishedMenu--playersPoints__player">
+                {{player.points}}
+                {{player.user.name}}
+            </li>
+        </ol>
     </div>
     <div v-if="!game.active" class="gameComponent__modal">
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">

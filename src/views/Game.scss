@@ -23,7 +23,8 @@ $fontSize: 1.6rem;
 }
 
 .gamestarter{
-  border: thin solid $colorSecondary;
+  border: thin solid $colorPrimary;
+  color: $colorPrimary;
   border-radius: 10px;
   padding: 10px;
   font-size: 2rem;
@@ -38,6 +39,10 @@ $fontSize: 1.6rem;
     border-color: red;
     color: red;
   }
+}
+
+.gameFinishedMenu div .gamestarter{
+  top: 5%;
 }
 
 .waitpanel{
@@ -59,12 +64,16 @@ $fontSize: 1.6rem;
 
 .wordGenerator {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 0;
-  font-size: 4vw;
+  font-size: max(2rem, 4vw);
 }
 
 .wordGenerator span {
   border: thin solid red;
+  font-size: inherit;
   padding: 0 4px;
   margin-right: 7px;
   color: $colorGreyDark;
@@ -73,16 +82,16 @@ $fontSize: 1.6rem;
 .userMesseageBox {
   z-index: 1;
   padding: 10px;
-  font-size: 4vw;
+  font-size: max(1.4rem, 3vw);
   background-color: $colorGreyLightnotest;
   position: absolute;
   color: $colorGreyDark;
-  border-radius: 5px;
+  border-radius: 2px;
   border: thin solid $colorGreyDark;
 }
 
 .userMesseageBox h4 {
-  font-size: max(1.2rem, 3vh);
+  font-size: max(2rem, 3vh);
   color: inherit;
   text-align: center;
 }
@@ -226,7 +235,7 @@ $fontSize: 1.6rem;
   }
 }
 
-.addNameIfDontExist{
+.addNameIfDontExist {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -234,4 +243,44 @@ $fontSize: 1.6rem;
   right: 0;
   z-index: 1000;
   background-color: #fff;
+}
+
+.gameFinishedMenu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 2.4rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  z-index: 3;
+  color: $colorPrimary;
+  overflow: auto;
+
+  &--gameWonPlayer {
+    margin-top: 20vh;
+  }
+
+  &--playersPoints {
+
+
+    &__player {
+
+    }
+  }
+}
+
+.waitNewGame {
+  position: absolute;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%,0);
+}
+
+@media (min-width: 400px) {
+  .gameFinishedMenu {
+  
+    &--gameWonPlayer {
+      margin-top: 15vh;
+    }
+  }
 }
