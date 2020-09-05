@@ -1,3 +1,8 @@
+$colorPrimary: #fff;
+$colorSecondary: #000;
+$colorGreyLighter: #808080;
+$colorGreyLight: #555;
+$colorGreyDark: #353535;
 $fontSize: 1.6rem;
 
 @font-face {
@@ -11,6 +16,7 @@ $fontSize: 1.6rem;
   font-size: $fontSize;
   font-family: 'Roboto';
   display: flex;
+  flex-direction: column;
 }
 
 .gameBox{
@@ -23,4 +29,20 @@ $fontSize: 1.6rem;
   padding: 10px;
   background-color: #42b983;
   position: absolute;
+}
+
+.invisible {
+  display: none;
+}
+
+.sendMessageBox {
+  border: 1px solid $colorSecondary;
+
+  &--sendMessage {
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
