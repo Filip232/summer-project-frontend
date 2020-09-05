@@ -1,0 +1,99 @@
+$colorPrimary: #fff;
+$colorSecondary: #000;
+
+.console {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: none;
+    $fontSize: 1.6rem;
+    font-weight: normal;
+    font-family: monospace;
+    background-color: $colorPrimary;
+    padding: 0;
+
+  
+    &__textarea {
+        border: none;
+        flex-grow: 1;
+        resize: none;
+        border: none;
+        background-color: $colorPrimary;
+        box-shadow: none;
+    }
+
+    &_textarea:focus{
+        outline: none;
+        border: none;
+    }
+  
+    &__input {
+      border: none;
+      width: 100%;
+      font-size: $fontSize;
+      font-family: inherit;
+      background-color: $colorPrimary;
+      color: $colorSecondary;
+      padding: 1px 0;
+    }
+
+    &__input:focus{
+        outline: none;
+        border: none;
+    }
+
+    &__user{
+      color: #fff;
+      font-size: 1.6rem;
+    }
+  
+    &__prompt-wrapper {
+        position: absolute;
+        bottom: 2px;
+        color: transparent;
+        user-select: none;
+        pointer-events: none;
+        width: 92%;
+        margin-left: 8%;
+        font-size: $fontSize;
+        background-color: $colorPrimary;
+    }
+  
+    &__prompt {
+        color: $colorSecondary;
+    }
+}
+  
+@media (prefers-color-scheme: dark) {
+    .console {
+        background-color: $colorSecondary;
+        color: $colorPrimary;
+
+        &__textarea {
+            background-color: $colorSecondary;
+            color: $colorPrimary;
+        }
+
+        &__input {
+            color: transparent;
+            background-color: $colorSecondary;
+        }
+
+        &__prompt-wrapper {
+            background-color: $colorSecondary;
+            color: $colorPrimary;
+        }
+
+        &__prompt {
+            color: $colorPrimary;
+        }
+    }
+}
+
+.d-flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}

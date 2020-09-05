@@ -1,0 +1,12 @@
+<div class="console">
+    <textarea class="console__textarea" readonly v-model="consoleOutput"></textarea>
+    <form @submit.prevent="onSubmit" class="d-flex flex-row">
+        <div class="console__user">
+            <span class="console__user-sign">C:\User</span>
+        </div>
+        <input class="console__input" type="text" v-model="consoleInput" autofocus>
+        <div class="console__prompt-wrapper">
+            {{ consoleInput}}<span class="console__prompt">|</span>
+        </div>
+    </form>
+</div>
