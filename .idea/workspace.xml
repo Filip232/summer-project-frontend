@@ -13,6 +13,7 @@
     <list default="true" id="cad8d6f1-a47f-4b83-93fd-5c5e16c98cef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Game.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/game.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/game.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +116,7 @@
       <workItem from="1598858243944" duration="12726000" />
       <workItem from="1598903867560" duration="53000" />
       <workItem from="1599230039580" duration="19872000" />
-      <workItem from="1599308037232" duration="8459000" />
+      <workItem from="1599308037232" duration="8713000" />
     </task>
     <servers />
   </component>

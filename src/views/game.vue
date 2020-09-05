@@ -8,11 +8,11 @@ import {Api} from "@/api";
 export default {
   name: "game",
   data() {
-    return {
+    return{
       inputValue: '',
       game: {},
       userMessages: [], // { id: '', text: '', x: 40, y 50 },
-      isHamburgerActive: false
+      isNavigationActive: false
     }
   },
 
@@ -20,7 +20,7 @@ export default {
     sendMessage() {
       let id = Math.random() * 10101010;
       this.userMessages.push({
-        id: id,
+        id: Math.random()*10101010,
         text: this.inputValue,
         x: Math.random() * 90,
         y: Math.random() * 90,
@@ -48,8 +48,8 @@ export default {
       }
       return this.startPolling();
     },
-    showHideHamburger(){
-      this.isHamburgerActive = !this.isHamburgerActive;
+    showHideNavigation(){
+      this.isNavigationActive = !this.isNavigationActive;
     }
   },
   async mounted() {

@@ -22,6 +22,20 @@ $fontSize: 1.6rem;
   flex-direction: column;
 }
 
+.gamestarter{
+  border: thin solid $colorSecondary;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.gamestarter:focus{
+  outline: none;
+}
+
 .gameBox {
   background-color: $colorGreyLightest;
   height: 100%;
@@ -80,6 +94,20 @@ $fontSize: 1.6rem;
       outline: none;
     }
   }
+
+  &--confirm{
+    border: thin solid $colorGreyLight;
+    background-color: $colorGreyLightest;
+    color: $colorGreyDark;
+    border-radius: 2px;
+    &:focus{
+      outline: none;
+    }
+    &:active{
+      background-color: $colorGreyDark;
+      color: $colorPrimary;
+    }
+  }
 }
 
 .gameComponent__modal {
@@ -95,9 +123,10 @@ $fontSize: 1.6rem;
 .hamburger {
   display: inline-block;
   cursor: pointer;
-  background-color: transparent;
+  background-color: $colorGreyLightnotest;
   border: 0;
   margin: 0;
+  z-index: 2;
 }
 
 .hamburger--box {
@@ -150,14 +179,14 @@ $fontSize: 1.6rem;
 }
 
 .navigation {
-  height: 100vh;
+  height: 100%;
   width: 250px;
   position: fixed;
-  top: 46px;
+  top: 0;
   left: 0;
-  z-index: 5;
-  transform: translateX(-250px);
-  background-color: $colorGreyLight;
+  z-index: 1;
+  transform: translateX(0);
+  background-color: $colorGreyLightnotest;;
   transition: transform .3s .1s ease-in-out;
 }
 
@@ -167,9 +196,4 @@ $fontSize: 1.6rem;
   flex-direction: column;
   justify-content: flex-start;
   list-style: unset;
-}
-
-.navigation--active {
-  transform: translateX(0);
-  transition: transform .3s .1s ease-in-out;
 }
