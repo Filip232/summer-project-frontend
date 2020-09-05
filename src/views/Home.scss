@@ -1,5 +1,6 @@
 $colorPrimary: #fff;
 $colorSecondary: #000;
+$fontSize: 1.6rem;
 
 .console {
     height: 100vh;
@@ -7,7 +8,7 @@ $colorSecondary: #000;
     position: relative;
     flex-direction: column;
     border: none;
-    $fontSize: 1.6rem;
+    font-size: $fontSize;
     font-weight: normal;
     font-family: monospace;
     background-color: $colorPrimary;
@@ -19,33 +20,31 @@ $colorSecondary: #000;
         flex-grow: 1;
         resize: none;
         border: none;
-        background-color: $colorPrimary;
         box-shadow: none;
+
+        &:focus{
+            outline: none;
+            border: none;
+            font-size: inherit;
+            font-family: inherit;
+        }
     }
 
-    &_textarea:focus{
-        outline: none;
-        border: none;
-    }
-  
     &__input {
-      border: none;
-      width: 100%;
-      font-size: $fontSize;
-      font-family: inherit;
-      background-color: $colorPrimary;
-      color: $colorSecondary;
-      padding: 1px 0;
-    }
-
-    &__input:focus{
-        outline: none;
         border: none;
+        width: 100%;
+        font-size: inherit;
+        font-family: inherit;
+
+        &:focus{
+            outline: none;
+            border: none;
+        }
     }
 
-    &__user{
-      color: #fff;
-      font-size: 1.6rem;
+    &__input-wrapper {
+        position: relative;
+        flex-grow: 1;
     }
   
     &__prompt-wrapper {
@@ -54,46 +53,22 @@ $colorSecondary: #000;
         color: transparent;
         user-select: none;
         pointer-events: none;
-        width: 92%;
-        margin-left: 8%;
-        font-size: $fontSize;
-        background-color: $colorPrimary;
+        width: 100%;
+        background-color: transparent;
     }
   
     &__prompt {
         color: $colorSecondary;
     }
+
+    &__user {
+        margin-right: .5em;
+    }
 }
-  
+
 @media (prefers-color-scheme: dark) {
     .console {
         background-color: $colorSecondary;
         color: $colorPrimary;
-
-        &__textarea {
-            background-color: $colorSecondary;
-            color: $colorPrimary;
-        }
-
-        &__input {
-            color: transparent;
-            background-color: $colorSecondary;
-        }
-
-        &__prompt-wrapper {
-            background-color: $colorSecondary;
-            color: $colorPrimary;
-        }
-
-        &__prompt {
-            color: $colorPrimary;
-        }
     }
-}
-
-.d-flex {
-  display: flex;
-}
-.flex-row {
-  flex-direction: row;
 }

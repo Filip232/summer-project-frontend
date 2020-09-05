@@ -15,13 +15,16 @@ export default {
     };
   },
   methods: {
-    onSubmit(){
-      switch (this.consoleInput){
+    onSubmit(this: {consoleInput: string; consoleOutput: string}) {
+      const userInputSplit = this.consoleInput.split(' ');
+      this.consoleInput = '';
+      switch (userInputSplit[0]){
         case 'a':
           this.consoleOutput += '\nelo';
           break;
         case 'change-name':
-          this.consoleOutput += '\nname was changed to ';
+          this.$store.commit('changeUserName', userInputSplit[1]);
+          this.consoleOutput += '\nname was changed to ' + userInputSplit[1];
           break;
         case 'join':
           break;
