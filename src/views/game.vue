@@ -27,18 +27,6 @@ export default {
         }
       })
       this.inputValue = '';
-    },
-    hamburgerShowHide() {
-      const hamburger = document.querySelector('.hamburger');
-      const nav = document.querySelector('.navigation');
-      const handleClick = () => {
-        hamburger.classList.toggle('hamburger--active');
-        nav.classList.toggle('navigation--active');
-      }
-      hamburger.addEventListener('click', handleClick);
-      setTimeout(() => {
-        this.userMessages = this.userMessages.filter((message) => id !== message.id);
-      }, 5000)
     }
   },
   async mounted() {
