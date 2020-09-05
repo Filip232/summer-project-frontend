@@ -1,7 +1,7 @@
 <div class="console">
     <textarea class="console__textarea" readonly v-model="consoleOutput" ref="consoleOutputElement" @focus="() => $refs.consoleInputElement.focus()"></textarea>
     <form @submit.prevent="onSubmit" class="d-flex flex-row">
-        <div class="console__user">C:\User\{{$store.state.userName ? $store.state.userName + '\\' : ''}}</div>
+        <div class="console__user">C:\User\{{$store.state.user.name ? $store.state.user.name + '\\' : ''}}</div>
         <div class="console__input-wrapper">
             <input class="console__input" type="text" :value="consoleInput" @input="$event => consoleInput = $event.target.value" autofocus autocapitalize="off" autocomplete="off" ref="consoleInputElement">
             <div class="console__prompt-wrapper">
