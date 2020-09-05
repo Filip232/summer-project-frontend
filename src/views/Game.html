@@ -31,7 +31,7 @@
             <h4>{{msg.user.name}}</h4>
             {{msg.text}}
         </div>
-        <p id="word" class="wordGenerator">
+        <p id="word" class="wordGenerator" :style="{'margin-top': game.currentWordOptions.y + '%', 'margin-left': game.currentWordOptions.x + '%'}">
             <span v-for="letter in game.currentWord" :key="letter.index">{{letter}}</span>
         </p>
     </div>
