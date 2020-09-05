@@ -12,7 +12,7 @@ export default {
       inputValue: '',
       game: {},
       userMessages: [], // { id: '', text: '', x: 40, y 50 },
-      isHamburgerActive: false
+      isNavigationActive: false
     }
   },
 
@@ -48,8 +48,8 @@ export default {
       }
       return this.startPolling();
     },
-    showHideHamburger(){
-      this.isHamburgerActive = !this.isHamburgerActive;
+    showHideNavigation(){
+      this.isNavigationActive = !this.isNavigationActive;
     }
   },
   async mounted() {
