@@ -1,12 +1,5 @@
 <div class="gameComponent">
     <div v-if="game.finished" class="gameFinishedMenu">
-        <h3>Game won by: {{winner.user.name}}!</h3>
-        <ol>
-            <li v-for="player in game.players" :key="player.id">
-                {{player.points}}
-                {{player.user.name}}
-            </li>
-        </ol>
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
             <button type="button" class="gamestarter" @click="startGame">
                 Start next game
