@@ -1,3 +1,10 @@
+$colorPrimary: #fff;
+$colorSecondary: #000;
+$colorGreyLightest: rgba(200, 200, 200, 0.8);
+$colorGreyLightnotest: rgb(190, 190, 190);
+$colorGreyLighter: #808080;
+$colorGreyLight: #555;
+$colorGreyDark: #353535;
 $fontSize: 1.6rem;
 
 @font-face {
@@ -10,17 +17,60 @@ $fontSize: 1.6rem;
 .gameComponent{
   font-size: $fontSize;
   font-family: 'Roboto';
+  height: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .gameBox{
-  height: 90vh;
-  width: 90vw;
+  background-color: $colorGreyLightest;
+  height: 100%;
+  width: 100vw;
   position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.wordGenerator{
+  position: absolute;
+  padding: 10px;
+  color: $colorGreyDark;
+  background-color: $colorGreyLightnotest;
+  border: thin solid $colorGreyDark;
+  border-radius: 5px;
+  z-index: 0;
 }
 
 .userMesseageBox{
+  z-index: 1;
   padding: 10px;
-  background-color: #42b983;
+  background-color: $colorGreyLightnotest;
   position: absolute;
+  color: $colorGreyDark;
+  border-radius: 5px;
+  border: thin solid $colorGreyDark;
+}
+
+.userMesseageBox h4{
+  color: inherit;
+  text-align: center;
+}
+
+.invisible {
+  display: none;
+}
+
+.sendMessageBox {
+  border: 1px solid $colorSecondary;
+
+  &--sendMessage {
+    width: 100%;
+    background-color: $colorGreyLightnotest;
+    color: $colorGreyDark;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }

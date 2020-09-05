@@ -20,8 +20,11 @@ export default {
       this.userMessages.push({
         id: id,
         text: this.inputValue,
-        x: Math.random() * 90,
-        y: Math.random() * 90
+        x: Math.random()*90,
+        y: Math.random()*90,
+        user: {
+          name: 'test'
+        }
       })
       this.inputValue = '';
       setTimeout(() => {

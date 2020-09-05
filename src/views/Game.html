@@ -1,17 +1,24 @@
 <div class="gameComponent">
+    
     <div id="game" class="gameBox">
-        <div v-for="msg in userMessages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">{{msg.text}}</div>
+        <div v-for="msg in userMessages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">
+            <h4>{{msg.user.name}}</h4>
+            {{msg.text}}
+        </div>
+        <div id="word" class="wordGenerator">
+            Password
+        </div>
     </div>
     <div>
-        <div>
+        <div class="invisible">
             <ul>
                 <li>
                    {{$store.state.user.name}}
                 </li>
             </ul>
         </div>
-        <form @submit.prevent="sendMesseage">
-            <input v-model=inputValue type="text">
+        <form @submit.prevent="sendMesseage" class="sendMessageBox">
+            <input v-model=inputValue type="text" class="sendMessageBox--sendMessage">
         </form>
     </div>
 </div>
