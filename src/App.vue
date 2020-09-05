@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="h-100p">
     <router-view></router-view>
   </div>
 </template>
@@ -66,6 +66,10 @@ q:before, q:after {
   content: none;
 }
 
+html, body {
+  height: 100%;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -102,6 +106,10 @@ input, textarea{
 
 .flex-row {
   flex-direction: row;
+}
+
+.h-100p {
+  height: 100%;
 }
 
 </style>
