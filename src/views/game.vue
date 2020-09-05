@@ -11,7 +11,8 @@ export default {
     return {
       inputValue: '',
       game: {},
-      userMessages: [] // { id: '', text: '', x: 40, y 50 },
+      userMessages: [], // { id: '', text: '', x: 40, y 50 },
+      isHamburgerActive: false
     }
   },
 
@@ -46,6 +47,9 @@ export default {
           this.game = game;
       }
       return this.startPolling();
+    },
+    showHideHamburger(){
+      this.isHamburgerActive = !this.isHamburgerActive;
     }
   },
   async mounted() {
