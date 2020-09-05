@@ -28,18 +28,15 @@
             </ul>
         </div>
         <form @submit.prevent="sendMesseage" class="sendMessageBox">
-            <button type="button" class="hamburger" @click="showHideHamburger">
+            <button type="button" class="hamburger" @click="showHideNavigation">
                 <span class="hamburger--box" >
                     <span class="hamburger--inner"></span>
                 </span>
             </button>
-            <div v-if="this.isHamburgerActive" class="navigation">
+            <div v-if="isNavigationActive" class="navigation">
                 <ul class="navigation-list">
                     <li>
-                        <p>tekst</p>
-                    </li>
-                    <li>
-                        <p>tekst2</p>
+                        {{$store.state.user.name}}
                     </li>
                 </ul>
             </div>
