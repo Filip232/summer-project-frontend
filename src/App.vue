@@ -76,7 +76,6 @@ table {
 }
 
 html {
-  font-family: Roboto;
   font-size: 10px;
 }
 
@@ -99,6 +98,8 @@ input, textarea{
   border: none;
   background: transparent;
 }
+
+
 
 .d-flex {
   display: flex;
