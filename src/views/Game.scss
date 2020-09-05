@@ -33,17 +33,21 @@ $fontSize: 1.6rem;
 
 .wordGenerator{
   position: absolute;
-  padding: 10px;
-  color: $colorGreyDark;
-  background-color: $colorGreyLightnotest;
-  border: thin solid $colorGreyDark;
-  border-radius: 5px;
   z-index: 0;
+  font-size: 4vw;
+}
+
+.wordGenerator span{
+  border: thin solid red;
+  padding: 2px;
+  margin-right: 10px;
+  color: $colorGreyDark;
 }
 
 .userMesseageBox{
   z-index: 1;
   padding: 10px;
+  font-size: 4vw;
   background-color: $colorGreyLightnotest;
   position: absolute;
   color: $colorGreyDark;
@@ -52,6 +56,7 @@ $fontSize: 1.6rem;
 }
 
 .userMesseageBox h4{
+  font-size: inherit;
   color: inherit;
   text-align: center;
 }
@@ -68,6 +73,7 @@ $fontSize: 1.6rem;
     background-color: $colorGreyLightnotest;
     color: $colorGreyDark;
     text-align: center;
+    font-size:  max(1.6rem,  3vw);
 
     &:focus {
       outline: none;
