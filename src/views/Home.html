@@ -5,7 +5,7 @@
         <div class="console__input-wrapper">
             <input class="console__input" type="text" :value="consoleInput" @input="$event => consoleInput = $event.target.value" autofocus autocapitalize="off" autocomplete="off" ref="consoleInputElement">
             <div class="console__prompt-wrapper">
-                {{ consoleInput}}<span class="console__prompt">|</span>
+                {{ consoleInput}}<span class="console__prompt"></span>
             </div>
         </div>
     </form>
