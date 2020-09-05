@@ -32,6 +32,10 @@ $fontSize: 1.6rem;
   left: 50%;
 }
 
+.gamestarter:focus{
+  outline: none;
+}
+
 .gameBox {
   background-color: $colorGreyLightest;
   height: 100%;
