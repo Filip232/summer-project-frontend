@@ -1,7 +1,7 @@
 <div class="gameComponent">
     <div v-if="!game.active" class="gameComponent__modal">
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
-            <button type="button" @click="startGame">
+            <button type="button" class="gamestarter" @click="startGame">
                 Start game
             </button>
         </div>
@@ -41,6 +41,7 @@
                 </ul>
             </div>
             <input v-model=inputValue type="text" class="sendMessageBox--sendMessage">
+            <button type="submit" class="sendMessageBox--confirm">Confirm</button>
         </form>
     </div>
 </div>
