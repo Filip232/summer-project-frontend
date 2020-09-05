@@ -18,7 +18,10 @@ export default {
         id: Math.random()*10101010,
         text: this.inputValue,
         x: Math.random()*90,
-        y: Math.random()*90
+        y: Math.random()*90,
+        user: {
+          name: 'test'
+        }
       })
       this.inputValue = '';
     }

@@ -1,6 +1,9 @@
 <div class="gameComponent">
     <div id="game" class="gameBox">
-        <div v-for="msg in userMessages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">{{msg.text}}</div>
+        <div v-for="msg in userMessages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">
+            <h4>{{msg.user.name}}</h4>
+            {{msg.text}}
+        </div>
     </div>
     <div>
         <div>
