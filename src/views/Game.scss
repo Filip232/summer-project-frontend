@@ -28,9 +28,21 @@ $fontSize: 1.6rem;
   width: 100vw;
   position: relative;
   overflow: hidden;
+  z-index: -1;
+}
+
+.wordGenerator{
+  position: absolute;
+  padding: 10px;
+  color: $colorGreyDark;
+  background-color: $colorGreyLightnotest;
+  border: thin solid $colorGreyDark;
+  border-radius: 5px;
+  z-index: 0;
 }
 
 .userMesseageBox{
+  z-index: 1;
   padding: 10px;
   background-color: $colorGreyLightnotest;
   position: absolute;
