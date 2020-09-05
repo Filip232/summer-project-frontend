@@ -40,6 +40,14 @@ $fontSize: 1.6rem;
   }
 }
 
+.waitpanel{
+  position: absolute;
+  top: 50%;
+  font-size: 2.4rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .gameBox {
   background-color: $colorGreyLightest;
   height: 100%;
