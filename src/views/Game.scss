@@ -1,0 +1,26 @@
+$fontSize: 1.6rem;
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+.gameComponent{
+  font-size: $fontSize;
+  font-family: 'Roboto';
+  display: flex;
+}
+
+.gameBox{
+  height: 90vh;
+  width: 90vw;
+  position: relative;
+}
+
+.userMesseageBox{
+  padding: 10px;
+  background-color: #42b983;
+  position: absolute;
+}

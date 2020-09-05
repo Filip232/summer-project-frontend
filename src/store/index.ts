@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Vuex, {StoreOptions} from 'vuex'
 import VuexPersistence from 'vuex-persist'
-import {AccountType} from "@/models/AccountType";
-import {Job} from "@/models/Job";
 
 const vuexLocal = new VuexPersistence({
     storage: window.localStorage

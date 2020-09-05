@@ -1,0 +1,18 @@
+<div class="gameComponent">
+    <div id="game" class="gameBox">
+        <div v-for="msg in userMessages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">{{msg.text}}</div>
+    </div>
+    <div>
+        <div>
+            <ul>
+                <li>
+                   {{$store.state.userName}}
+                </li>
+            </ul>
+        </div>
+        <form @submit.prevent="sendMesseage">
+            <input v-model=inputValue type="text">
+            <input type="submit">
+        </form>
+    </div>
+</div>

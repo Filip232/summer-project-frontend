@@ -7,6 +7,7 @@ import storage from '@/store';
 import Estimate from "../views/Estimate.vue";
 import CreateEstimate from "../views/Create-Estimate.vue";
 import RoomDetails from "../views/Room-Details.vue"
+import Game from "../views/game.vue"
 
 Vue.use(VueRouter)
 
@@ -60,6 +61,11 @@ const routes = [
         meta: {
             isBack: true
         }
+    },
+    {
+        path: '/game.exe',
+        name: 'Game',
+        component: Game
     }
 ]
 

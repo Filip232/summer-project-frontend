@@ -11,8 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad8d6f1-a47f-4b83-93fd-5c5e16c98cef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/Game.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Game.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/game.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +29,7 @@
       <list>
         <option value="TypeScript File" />
         <option value="Vue Single File Component" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -36,6 +42,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -111,7 +118,7 @@
       <workItem from="1598645442143" duration="217000" />
       <workItem from="1598858243944" duration="12726000" />
       <workItem from="1598903867560" duration="53000" />
-      <workItem from="1599230039580" duration="11928000" />
+      <workItem from="1599230039580" duration="16133000" />
     </task>
     <servers />
   </component>
@@ -195,13 +202,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595493421229" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1599299007257">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1599302674955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599299007257" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598889681809">
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599302674955" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599302308840">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598889681809" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599302308840" />
   </component>
 </project>
