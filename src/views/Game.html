@@ -1,5 +1,14 @@
 <div class="gameComponent">
-    
+    <div v-if="!game.active" class="gameComponent__modal">
+        <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
+            <button type="button" class="gamestarter" @click="startGame">
+                Start game
+            </button>
+        </div>
+        <div v-else>
+            Wait for owner to start game
+        </div>
+    </div>
     <div id="game" class="gameBox">
         <div v-for="msg in userMessages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">
             <h4>{{msg.user.name}}</h4>
@@ -35,7 +44,7 @@
                 </ul>
             </div>
             <input v-model=inputValue type="text" class="sendMessageBox--sendMessage">
-            <button class="sendMessageBox--confirm">Confirm</button>
+            <button type="submit" class="sendMessageBox--confirm">Confirm</button>
         </form>
     </div>
 </div>

@@ -14,7 +14,7 @@ $fontSize: 1.6rem;
   font-weight: 400;
 }
 
-.gameComponent{
+.gameComponent {
   font-size: $fontSize;
   font-family: 'Roboto';
   height: 100%;
@@ -22,7 +22,17 @@ $fontSize: 1.6rem;
   flex-direction: column;
 }
 
-.gameBox{
+.gamestarter{
+  border: thin solid $colorSecondary;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.gameBox {
   background-color: $colorGreyLightest;
   height: 100%;
   width: 100vw;
@@ -31,20 +41,20 @@ $fontSize: 1.6rem;
   z-index: -1;
 }
 
-.wordGenerator{
+.wordGenerator {
   position: absolute;
   z-index: 0;
   font-size: 4vw;
 }
 
-.wordGenerator span{
+.wordGenerator span {
   border: thin solid red;
   padding: 0 4px;
   margin-right: 7px;
   color: $colorGreyDark;
 }
 
-.userMesseageBox{
+.userMesseageBox {
   z-index: 1;
   padding: 10px;
   font-size: 4vw;
@@ -55,7 +65,7 @@ $fontSize: 1.6rem;
   border: thin solid $colorGreyDark;
 }
 
-.userMesseageBox h4{
+.userMesseageBox h4 {
   font-size: inherit;
   color: inherit;
   text-align: center;
@@ -68,13 +78,13 @@ $fontSize: 1.6rem;
 .sendMessageBox {
   border: 1px solid $colorSecondary;
   display: flex;
-  
+
   &--sendMessage {
     width: 100%;
     background-color: $colorGreyLightnotest;
     color: $colorGreyDark;
     text-align: center;
-    font-size:  max(1.6rem,  3vw);
+    font-size: max(1.6rem, 3vw);
 
     &:focus {
       outline: none;
@@ -83,89 +93,101 @@ $fontSize: 1.6rem;
 
   &--confirm{
     border: thin solid $colorGreyLight;
-    background-color: $colorGreyLighter;
-    color: inherit;
+    background-color: $colorGreyLightest;
+    color: $colorGreyDark;
+    border-radius: 2px;
+
   }
 }
 
-.hamburger {
-  display: inline-block;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-}
-
-.hamburger--box {
-  width: 24px;
-  height: 15px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger--inner {
-  width: 100%;
-  height: 3px;
-  background-color: $colorSecondary;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.hamburger--inner::before, .hamburger--inner::after {
-  content: '';
-  width: 100%;
-  height: 3px;
-  background-color: $colorSecondary;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform .3s ease-in-out;
-}
-
-.hamburger--inner::before {
-  transform: translateY(3px);
-}
-
-.hamburger--inner::after {
-  transform: translateY(-6px);
-}
-
-.hamburger--active .hamburger--inner {
-  background-color: transparent;
-}
-
-.hamburger--active .hamburger--inner::before {
-  transform: translateY(0) rotate(45deg);
-}
-
-.hamburger--active .hamburger--inner::after {
-  transform: translateY(0) rotate(-45deg);
-}
-
-.navigation {
-  height: 100vh;
-  width: 250px;
+.gameComponent__modal {
   position: fixed;
-  top: 46px;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
   left: 0;
-  z-index: 5;
-  transform: translateX(-250px);
-  background-color: $colorGreyLight;
-  transition: transform .3s .1s ease-in-out;
-}
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 
-.navigation-list {
-  margin: 10px 10px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  list-style: unset;
-}
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+  }
 
-.navigation--active {
-  transform: translateX(0);
-  transition: transform .3s .1s ease-in-out;
+  .hamburger--box {
+    width: 24px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger--inner {
+    width: 100%;
+    height: 3px;
+    background-color: $colorSecondary;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hamburger--inner::before, .hamburger--inner::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: $colorSecondary;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform .3s ease-in-out;
+  }
+
+  .hamburger--inner::before {
+    transform: translateY(3px);
+  }
+
+  .hamburger--inner::after {
+    transform: translateY(-6px);
+  }
+
+  .hamburger--active .hamburger--inner {
+    background-color: transparent;
+  }
+
+  .hamburger--active .hamburger--inner::before {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .hamburger--active .hamburger--inner::after {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  .navigation {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 46px;
+    left: 0;
+    z-index: 5;
+    transform: translateX(-250px);
+    background-color: $colorGreyLight;
+    transition: transform .3s .1s ease-in-out;
+  }
+
+  .navigation-list {
+    margin: 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: unset;
+  }
+
+  .navigation--active {
+    transform: translateX(0);
+    transition: transform .3s .1s ease-in-out;
+  }
 }
