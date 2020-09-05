@@ -1,5 +1,7 @@
 $colorPrimary: #fff;
 $colorSecondary: #000;
+$colorGreyLightest: rgba(200, 200, 200, 0.8);
+$colorGreyLightnotest: rgb(190, 190, 190);
 $colorGreyLighter: #808080;
 $colorGreyLight: #555;
 $colorGreyDark: #353535;
@@ -20,17 +22,20 @@ $fontSize: 1.6rem;
 }
 
 .gameBox{
+  background-color: $colorGreyLightest;
   height: 90vh;
-  width: 90vw;
+  width: 100vw;
   position: relative;
   
 }
 
 .userMesseageBox{
   padding: 10px;
-  background-color: $colorGreyLighter;
+  background-color: $colorGreyLightnotest;
   position: absolute;
   color: $colorGreyDark;
+  border-radius: 5px;
+  border: thin solid $colorGreyDark;
 }
 
 .userMesseageBox h4{
@@ -47,6 +52,9 @@ $fontSize: 1.6rem;
 
   &--sendMessage {
     width: 100%;
+    background-color: $colorGreyLightnotest;
+    color: $colorGreyDark;
+    text-align: center;
 
     &:focus {
       outline: none;
