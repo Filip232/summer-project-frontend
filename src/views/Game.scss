@@ -72,20 +72,20 @@ $fontSize: 1.6rem;
   white-space: nowrap;
 
   &--rotate{
-    animation: around2 4s;
+    animation: around2 6s;
     animation-iteration-count: infinite;
   }
 }
 
 @keyframes around2{
   0% {
-    transform: rotate(100deg);
+    transform: rotate(170deg);
   }
   49% {
-    transform: rotate(30deg);
+    transform: rotate(10deg);
   }
   100% {
-    transform: rotate(100deg);
+    transform: rotate(170deg);
   }
 }
 
