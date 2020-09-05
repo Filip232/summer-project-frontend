@@ -7,7 +7,6 @@
                 {{player.user.name}}
             </li>
         </ol>
-
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
             <button type="button" class="gamestarter" @click="startGame">
                 Start next game
@@ -28,7 +27,7 @@
         </div>
     </div>
     <div id="game" class="gameBox">
-        <div v-for="msg in userMessages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">
+        <div v-for="msg in game.messages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">
             <h4>{{msg.user.name}}</h4>
             {{msg.text}}
         </div>
@@ -46,15 +45,20 @@
         </div>
         <form @submit.prevent="sendMessage" class="sendMessageBox">
             <button type="button" class="hamburger" @click="showHideNavigation">
-                <span class="hamburger--box" >
-                    <span class="hamburger--inner"></span>
-                </span>
+                <div class="hamburger--box" >
+                    <div class="hamburger--inner"></div>
+                </div>
             </button>
             <div v-if="isNavigationActive" class="navigation">
                 <ul class="navigation-list">
+                    <li>Players</li>
                     <li class="navigation-list--listElement" v-for="player in game.players" :key="player.index">
                         {{player.points}}
                         {{player.user.name}}
+                    </li>
+                    <li>Spectators</li>
+                    <li class="navigation-list--listElement" v-for="player in game.spectators" :key="player.index">
+                        {{player.name}}
                     </li>
                 </ul>
             </div>
