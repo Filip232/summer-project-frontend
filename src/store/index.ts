@@ -51,6 +51,7 @@ interface RootState {
     };
     estimate: Estimate[];
     roomDetails: RoomDetails[];
+    userName: string
 }
 
 export default new Vuex.Store<RootState>({
@@ -61,9 +62,13 @@ export default new Vuex.Store<RootState>({
             id: -1
         },
         estimate: [],
-        roomDetails: []
+        roomDetails: [],
+        userName: ''
     },
     mutations: {
+        changeUserName(state, {name}){
+            state.userName = name
+        },
         addNewUser(state, info: Account) {
             const newAccount: Account = {...info};
             if (newAccount.type !== AccountType.company) {
