@@ -59,6 +59,9 @@ $fontSize: 1.6rem;
 
 .wordGenerator {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 0;
   font-size: max(2rem, 4vw);
 }
