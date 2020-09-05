@@ -49,7 +49,8 @@ $fontSize: 1.6rem;
   
     &__prompt-wrapper {
         position: absolute;
-        bottom: 2px;
+        bottom: 0;
+        overflow: hidden;
         color: transparent;
         user-select: none;
         pointer-events: none;
@@ -58,6 +59,7 @@ $fontSize: 1.6rem;
     }
   
     &__prompt {
+        margin-left: -4px;
         color: $colorSecondary;
     }
 
