@@ -5,13 +5,6 @@
         <input type="submit" @click="changeUserName">
     </form>
     <div v-if="game.finished" class="gameFinishedMenu">
-        <h3>Game won by: {{winner.user.name}}!</h3>
-        <ol>
-            <li v-for="player in game.players" :key="player.id">
-                {{player.points}}
-                {{player.user.name}}
-            </li>
-        </ol>
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
             <button type="button" class="gamestarter" @click="startGame">
                 Start next game
@@ -43,7 +36,12 @@
             <h4>{{msg.user.name}}</h4>
             {{msg.text}}
         </div>
-        <p id="word" class="wordGenerator" :style="{'margin-top': game.currentWordOptions.y + '%', 'margin-left': game.currentWordOptions.x + '%'}">
+        <p
+            id="word"
+            class="wordGenerator"
+            :style="{'margin-top': game.currentWordOptions.y + '%', 'margin-left': game.currentWordOptions.x + '%'}"
+            :class="{'wordGenerator--rotate': game.currentWordType === 'ROTATING'}"
+        >
             <span v-for="letter in game.currentWord" :key="letter.index">{{letter}}</span>
         </p>
     </div>
