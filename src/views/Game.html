@@ -1,4 +1,9 @@
 <div class="gameComponent">
+    <form v-if="$store.state.user.name === ''" class="addNameIfDontExist">
+        Enter name before You join
+        <input type="text" v-model="userName">
+        <input type="submit" @click="changeUserName">
+    </form>
     <div v-if="game.finished">
         <h3>Game won by: {{winner.user.name}}!</h3>
         <ol>

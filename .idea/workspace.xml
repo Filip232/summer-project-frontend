@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Game.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/game.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/game.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +117,7 @@
       <workItem from="1598858243944" duration="12726000" />
       <workItem from="1598903867560" duration="53000" />
       <workItem from="1599230039580" duration="19872000" />
-      <workItem from="1599308037232" duration="15448000" />
+      <workItem from="1599308037232" duration="18172000" />
     </task>
     <servers />
   </component>

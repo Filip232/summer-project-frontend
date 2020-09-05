@@ -40,7 +40,12 @@ export default {
         case 'game.exe':
           switch (userInputSplit[1]) {
             case 'create':
-              await this.handleCreateGame();
+              if(this.$store.state.user.name === ''){
+                this.consoleOutput += '\n\nBefore you create the game please setup your name';
+              }else{
+                await this.handleCreateGame();
+              }
+
               break;
             case 'join':
               await this.handleGameJoin(userInputSplit[2]);
