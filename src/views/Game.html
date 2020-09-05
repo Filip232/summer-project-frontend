@@ -1,7 +1,7 @@
 <div class="gameComponent">
     <form v-if="$store.state.user.name === ''" class="addNameIfDontExist">
         Enter name before You join
-        <input type="text" v-model="userName" autofocus autocomplete="off" autocapitalize="off">
+        <input type="text" v-model="userName" maxlength="20" autofocus autocomplete="off" autocapitalize="off">
         <button type="submit" @click="changeUserName">Save</button>
     </form>
     <div v-if="game.finished" class="gameFinishedMenu">

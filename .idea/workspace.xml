@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cad8d6f1-a47f-4b83-93fd-5c5e16c98cef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/game.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/game.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Game.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Game.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +114,7 @@
       <workItem from="1598858243944" duration="12726000" />
       <workItem from="1598903867560" duration="53000" />
       <workItem from="1599230039580" duration="19872000" />
-      <workItem from="1599308037232" duration="22037000" />
+      <workItem from="1599308037232" duration="22729000" />
     </task>
     <servers />
   </component>
