@@ -45,7 +45,7 @@ export default {
       this.$store.commit('changeUserName', this.userName);
     },
     async startPolling() {
-      const {success, game} = await Api.fetch('games/' + this.$route.query.id + '/updatePoll')
+      const {success, game} = await Api.fetch('games/' + this.$route.query.id + '/updatePoll?cacheBust=' + Date.now())
         .then(res => res.json())
       console.log({success, game});
       if(success && game){
