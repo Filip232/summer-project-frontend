@@ -70,7 +70,7 @@ $fontSize: 1.6rem;
 }
 
 .userMesseageBox h4 {
-  font-size: inherit;
+  font-size: 4vh;
   color: inherit;
   text-align: center;
 }
@@ -96,10 +96,9 @@ $fontSize: 1.6rem;
   }
 
   &--confirm{
-    border: thin solid $colorGreyLight;
-    background-color: $colorGreyLightest;
+    border-left: thin solid $colorSecondary;
+    background-color: $colorGreyLightnotest;
     color: $colorGreyDark;
-    border-radius: 2px;
     &:focus{
       outline: none;
     }
