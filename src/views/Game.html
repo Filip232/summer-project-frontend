@@ -1,17 +1,10 @@
 <div class="gameComponent">
     <form v-if="$store.state.user.name === ''" class="addNameIfDontExist">
         Enter name before You join
-        <input type="text" v-model="userName">
-        <input type="submit" @click="changeUserName">
+        <input type="text" v-model="userName" autofocus autocomplete="off" autocapitalize="off">
+        <button type="submit" @click="changeUserName">Save</button>
     </form>
     <div v-if="game.finished" class="gameFinishedMenu">
-        <h3>Game won by: {{winner.user.name}}!</h3>
-        <ol>
-            <li v-for="player in game.players" :key="player.id">
-                {{player.points}}
-                {{player.user.name}}
-            </li>
-        </ol>
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
             <button type="button" class="gamestarter" @click="startGame">
                 Start next game
@@ -20,11 +13,11 @@
         <div v-else class="waitNewGame">
             Wait for owner to start new game
         </div>
-        <h3 class="gameFinishedMenu--gameWonPlayer">Game won by: {{winner.user.name}}!</h3>
+        <h3 class="gameFinishedMenu--gameWonPlayer">Game won by: {{ winner.user.name }}!</h3>
         <ol class="gameFinishedMenu--playersPoints">
             <li v-for="player in game.players" :key="player.id" class="gameFinishedMenu--playersPoints__player">
-                {{player.points}}
-                {{player.user.name}}
+                {{ player.points }}
+                {{ player.user.name }}
             </li>
         </ol>
     </div>
@@ -39,25 +32,26 @@
         </div>
     </div>
     <div id="game" class="gameBox">
-        <div v-for="msg in game.messages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">
-            <h4>{{msg.user.name}}</h4>
-            {{msg.text}}
+        <div v-for="msg in game.messages" :key="msg.id" class="userMesseageBox"
+             :style="{top: msg.y + '%', left: msg.x + '%'}">
+            <h4>{{ msg.user.name }}</h4>
+            {{ msg.text }}
         </div>
         <p id="word" class="wordGenerator">
-            <span v-for="letter in game.currentWord" :key="letter.index">{{letter}}</span>
+            <span v-for="letter in game.currentWord" :key="letter.index">{{ letter }}</span>
         </p>
     </div>
     <div>
         <div class="invisible">
             <ul>
                 <li>
-                   {{$store.state.user.name}}
+                    {{ $store.state.user.name }}
                 </li>
             </ul>
         </div>
         <form @submit.prevent="sendMessage" class="sendMessageBox">
             <button type="button" class="hamburger" @click="showHideNavigation">
-                <div class="hamburger--box" >
+                <div class="hamburger--box">
                     <div class="hamburger--inner"></div>
                 </div>
             </button>
@@ -65,16 +59,17 @@
                 <ul class="navigation-list">
                     <li>Players</li>
                     <li class="navigation-list--listElement" v-for="player in game.players" :key="player.index">
-                        {{player.points}}
-                        {{player.user.name}}
+                        {{ player.points }}
+                        {{ player.user.name }}
                     </li>
                     <li>Spectators</li>
                     <li class="navigation-list--listElement" v-for="player in game.spectators" :key="player.index">
-                        {{player.name}}
+                        {{ player.name }}
                     </li>
                 </ul>
             </div>
-            <input v-model=inputValue type="text" class="sendMessageBox--sendMessage" autofocus autocomplete="off" autocapitalize="off">
+            <input v-model=inputValue type="text" class="sendMessageBox--sendMessage" autofocus autocomplete="off"
+                   autocapitalize="off">
             <button type="submit" class="sendMessageBox--confirm">Confirm</button>
         </form>
     </div>

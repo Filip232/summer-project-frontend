@@ -236,13 +236,36 @@ $fontSize: 1.6rem;
 }
 
 .addNameIfDontExist {
+  padding-top: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #fff;
+  color: $colorPrimary;
+  text-align: center;
+  background-color: $colorSecondary;
+}
+
+.addNameIfDontExist input{
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 10px;
+  min-width: 400px;
+  border: 1px solid $colorPrimary;
+}
+
+.addNameIfDontExist button{
+  color: inherit;
+  margin-top: 15px;
+  padding: 5px 10px;
+  font-size: $fontSize;
 }
 
 .gameFinishedMenu {
