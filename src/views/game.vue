@@ -17,7 +17,7 @@ export default {
   },
 
   methods: {
-    sendMesseage() {
+    sendMessage() {
       let id = Math.random() * 10101010;
       this.userMessages.push({
         id: id,
@@ -25,7 +25,7 @@ export default {
         x: Math.random() * 90,
         y: Math.random() * 90,
         user: {
-          name: 'test'
+          name: this.$store.state.user.name
         }
       })
       this.inputValue = '';

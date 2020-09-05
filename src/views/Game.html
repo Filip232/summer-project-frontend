@@ -15,8 +15,7 @@
             {{msg.text}}
         </div>
         <p id="word" class="wordGenerator">
-            <span>P</span>
-            <span>a</span>
+            <span v-for="letter in game.currentWord" :key="letter.index">{{letter}}</span>
         </p>
     </div>
     <div>
@@ -27,7 +26,7 @@
                 </li>
             </ul>
         </div>
-        <form @submit.prevent="sendMesseage" class="sendMessageBox">
+        <form @submit.prevent="sendMessage" class="sendMessageBox">
             <button type="button" class="hamburger" @click="showHideHamburger">
                 <span class="hamburger--box" >
                     <span class="hamburger--inner"></span>
@@ -43,7 +42,7 @@
                     </li>
                 </ul>
             </div>
-            <input v-model=inputValue type="text" class="sendMessageBox--sendMessage">
+            <input v-model=inputValue type="text" class="sendMessageBox--sendMessage" autofocus autocomplete="off" autocapitalize="off">
         </form>
     </div>
 </div>
