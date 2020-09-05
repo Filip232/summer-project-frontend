@@ -32,13 +32,21 @@
         </div>
     </div>
     <div id="game" class="gameBox">
-        <div v-for="msg in game.messages" :key="msg.id" class="userMesseageBox"
-             :style="{top: msg.y + '%', left: msg.x + '%'}">
-            <h4>{{ msg.user.name }}</h4>
-            {{ msg.text }}
+        <div
+            v-for="msg in game.messages" :key="msg.id" class="userMesseageBox"
+            :style="{top: msg.y + '%', left: msg.x + '%'}"
+            :class="{'userMesseageBox--rotate': msg.type === 'ROTATING'}"
+        >
+            <h4>{{msg.user.name}}</h4>
+            {{msg.text}}
         </div>
-        <p id="word" class="wordGenerator">
-            <span v-for="letter in game.currentWord" :key="letter.index">{{ letter }}</span>
+        <p
+            id="word"
+            class="wordGenerator"
+            :style="{'margin-top': game.currentWordOptions.y + '%', 'margin-left': game.currentWordOptions.x + '%'}"
+            :class="{'wordGenerator--rotate': game.currentWordType === 'ROTATING'}"
+        >
+            <span v-for="letter in game.currentWord" :key="letter.index">{{letter}}</span>
         </p>
     </div>
     <div>
@@ -57,12 +65,12 @@
             </button>
             <div v-if="isNavigationActive" class="navigation">
                 <ul class="navigation-list">
-                    <li>Players</li>
+                    <li class="navigation-list--player">Players</li>
                     <li class="navigation-list--listElement" v-for="player in game.players" :key="player.index">
                         {{ player.points }}
                         {{ player.user.name }}
                     </li>
-                    <li>Spectators</li>
+                    <li class="navigation-list--spectator">Spectators</li>
                     <li class="navigation-list--listElement" v-for="player in game.spectators" :key="player.index">
                         {{ player.name }}
                     </li>
