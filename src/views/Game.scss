@@ -203,14 +203,22 @@ $fontSize: 1.6rem;
   left: 0;
   z-index: 1;
   transform: translateX(0);
+  border: 1px solid $colorSecondary;
   background-color: $colorGreyLightnotest;;
   transition: transform .3s .1s ease-in-out;
 }
 
 .navigation-list {
-  margin: 10px 10px 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
+
+  &--listElement {
+    padding: 5px;
+    width: 80%;
+    border-bottom: 1px solid $colorSecondary;
+    text-align: center;
+  }
 }
