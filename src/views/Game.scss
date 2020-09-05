@@ -23,7 +23,8 @@ $fontSize: 1.6rem;
 }
 
 .gamestarter{
-  border: thin solid $colorSecondary;
+  border: thin solid $colorPrimary;
+  color: $colorPrimary;
   border-radius: 10px;
   padding: 10px;
   font-size: 2rem;
@@ -42,8 +43,6 @@ $fontSize: 1.6rem;
 
 .gameFinishedMenu div .gamestarter{
   top: 5%;
-  color: $colorPrimary;
-  border-color: $colorPrimary;
 }
 
 .waitpanel{
