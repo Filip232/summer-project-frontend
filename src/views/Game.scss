@@ -80,6 +80,12 @@ $fontSize: 1.6rem;
       outline: none;
     }
   }
+
+  &--confirm{
+    border: thin solid $colorGreyLight;
+    background-color: $colorGreyLighter;
+    color: inherit;
+  }
 }
 
 .hamburger {
