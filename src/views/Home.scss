@@ -108,10 +108,11 @@ $fontSize: 1.6rem;
         color: $colorPrimary;
 
         &__prompt {
-            color: $colorPrimary;
-        }
-        &_prompt::before{
-          background-color: $colorSecondary;
+            background-color: $colorPrimary;
+
+            &::before {
+                background-color: $colorSecondary;
+            }
         }
     }
 
