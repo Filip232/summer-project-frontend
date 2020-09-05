@@ -18,6 +18,21 @@
             </ul>
         </div>
         <form @submit.prevent="sendMesseage" class="sendMessageBox">
+            <button type="button" class="hamburger">
+                <span class="hamburger--box">
+                    <span class="hamburger--inner"></span>
+                </span>
+            </button>
+            <div class="navigation">
+                <ul class="navigation-list">
+                    <li>
+                        <p>tekst</p>
+                    </li>
+                    <li>
+                        <p>tekst2</p>
+                    </li>
+                </ul>
+            </div>
             <input v-model=inputValue type="text" class="sendMessageBox--sendMessage">
         </form>
     </div>
