@@ -15,12 +15,23 @@ export default {
       isNavigationActive: false
     }
   },
-
+  computed: {
+    winner() {
+      if (!this.game || !this.game.finished) return;
+      let winner = { points: 0 };
+      this.game.players.forEach(player => {
+        if (player.points > winner.points) {
+          winner = player;
+        }
+      });
+      return winner;
+    }
+  },
   methods: {
     sendMessage() {
       let id = Math.random() * 10101010;
       this.userMessages.push({
-        id: Math.random()*10101010,
+        id: id,
         text: this.inputValue,
         x: Math.random() * 90,
         y: Math.random() * 90,
@@ -28,10 +39,11 @@ export default {
           name: this.$store.state.user.name
         }
       })
+      Api.fetch('games/' + this.$route.query.id + '/messages', {
+        method: 'POST',
+        body: JSON.stringify( {userId: this.$store.state.user.id, text: this.inputValue })
+      })
       this.inputValue = '';
-      setTimeout(() => {
-        this.userMessages = this.userMessages.filter((message) => id !== message.id);
-      }, 5000)
     },
     startGame() {
       Api.fetch('games/' + this.$route.query.id + '/start', {

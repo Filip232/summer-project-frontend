@@ -1,4 +1,22 @@
 <div class="gameComponent">
+    <div v-if="game.finished">
+        <h3>Game won by: {{winner.user.name}}!</h3>
+        <ol>
+            <li v-for="player in game.players" :key="player.id">
+                {{player.points}}
+                {{player.user.name}}
+            </li>
+        </ol>
+
+        <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
+            <button type="button" class="gamestarter" @click="startGame">
+                Start next game
+            </button>
+        </div>
+        <div v-else>
+            Wait for owner to start new game
+        </div>
+    </div>
     <div v-if="!game.active" class="gameComponent__modal">
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
             <button type="button" class="gamestarter" @click="startGame">
@@ -34,8 +52,9 @@
             </button>
             <div v-if="isNavigationActive" class="navigation">
                 <ul class="navigation-list">
-                    <li>
-                        {{$store.state.user.name}}
+                    <li v-for="player in game.players" :key="player.index">
+                        {{player.points}}
+                        {{player.user.name}}
                     </li>
                 </ul>
             </div>
