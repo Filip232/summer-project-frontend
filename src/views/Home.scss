@@ -70,5 +70,9 @@ $fontSize: 1.6rem;
     .console {
         background-color: $colorSecondary;
         color: $colorPrimary;
+
+        &__prompt {
+            color: $colorPrimary;
+        }
     }
 }
