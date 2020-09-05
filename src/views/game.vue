@@ -10,6 +10,7 @@ export default {
   data() {
     return {
       inputValue: '',
+      game: {},
       userMessages: [] // { id: '', text: '', x: 40, y 50 },
     }
   },
@@ -20,8 +21,8 @@ export default {
       this.userMessages.push({
         id: id,
         text: this.inputValue,
-        x: Math.random()*90,
-        y: Math.random()*90,
+        x: Math.random() * 90,
+        y: Math.random() * 90,
         user: {
           name: 'test'
         }
@@ -30,16 +31,32 @@ export default {
       setTimeout(() => {
         this.userMessages = this.userMessages.filter((message) => id !== message.id);
       }, 5000)
+    },
+    startGame() {
+      Api.fetch('games/' + this.$route.query.id + '/start', {
+        method: 'POST'
+      })
+    },
+    async startPolling() {
+      const {success, game} = await Api.fetch('games/' + this.$route.query.id + '/updatePoll')
+        .then(res => res.json())
+      console.log({success, game});
+      if(success && game){
+        console.log(game);
+          this.game = game;
+      }
+      return this.startPolling();
     }
   },
   async mounted() {
     //if (this.$store.state.user.name !== '' && this.$store.state.userId) {
-    const data = await (await Api.fetch('games/' + this.$route.query.id + '/join', {
+    const {game} = await (await Api.fetch('games/' + this.$route.query.id + '/join', {
       method: 'POST',
       body: JSON.stringify({userId: this.$store.state.user.id})
     })).json();
-    console.log(data);
-    console.log(this.$route.query.id);
+    console.log(game);
+    this.game = game;
+    this.startPolling();
   }
 
 }
