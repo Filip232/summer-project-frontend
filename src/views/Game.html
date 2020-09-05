@@ -39,7 +39,7 @@
         </div>
     </div>
     <div id="game" class="gameBox">
-        <div v-for="msg in game.messages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}">
+        <div v-for="msg in game.messages" :key="msg.id" class="userMesseageBox" :style="{top: msg.y + '%', left: msg.x + '%'}" :class="{'userMesseageBox--rotate': msg.type === 'ROTATING'}">
             <h4>{{msg.user.name}}</h4>
             {{msg.text}}
         </div>

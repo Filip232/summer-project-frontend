@@ -88,6 +88,18 @@ $fontSize: 1.6rem;
   color: $colorGreyDark;
   border-radius: 2px;
   border: thin solid $colorGreyDark;
+  &--rotate{
+    animation: around 4s;
+  }
+}
+
+@keyframes around{
+  0% {
+    transform: rotate(0);
+  }
+  49% {
+    transform: rotate(180deg);
+  }
 }
 
 .userMesseageBox h4 {
