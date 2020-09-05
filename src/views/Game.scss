@@ -69,6 +69,8 @@ $fontSize: 1.6rem;
   transform: translate(-50%, -50%);
   z-index: 0;
   font-size: max(2rem, 4vw);
+  white-space: nowrap;
+
   &--rotate{
     animation: around2 4s;
     animation-iteration-count: infinite;
