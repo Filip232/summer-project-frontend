@@ -1,5 +1,8 @@
 $colorPrimary: #fff;
 $colorSecondary: #000;
+$colorGreyLighter: #808080;
+$colorGreyLight: #555;
+$colorGreyDark: #353535;
 $fontSize: 1.6rem;
 
 .console {
@@ -84,6 +87,18 @@ $fontSize: 1.6rem;
     &__user {
         margin-right: .5em;
     }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+    ::-webkit-scrollbar-thumb {
+        background: $colorGreyLighter; 
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: $colorGreyLight;
+    }
 }
 
 
@@ -98,6 +113,14 @@ $fontSize: 1.6rem;
         &_prompt::before{
           background-color: $colorSecondary;
         }
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: $colorGreyLight; 
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: $colorGreyDark;
     }
 }
 
