@@ -17,14 +17,14 @@ $fontSize: 1.6rem;
 .gameComponent{
   font-size: $fontSize;
   font-family: 'Roboto';
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .gameBox{
   background-color: $colorGreyLightest;
-  height: 95vh;
+  height: 100%;
   width: 100vw;
   position: relative;
   overflow: hidden;
