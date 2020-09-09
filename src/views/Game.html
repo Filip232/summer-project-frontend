@@ -50,13 +50,6 @@
         </p>
     </div>
     <div>
-        <div class="invisible">
-            <ul>
-                <li>
-                    {{ $store.state.user.name }}
-                </li>
-            </ul>
-        </div>
         <form @submit.prevent="sendMessage" class="sendMessageBox">
             <button type="button" class="hamburger" @click="showHideNavigation">
                 <div class="hamburger--box">

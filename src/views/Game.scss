@@ -223,6 +223,13 @@ $fontSize: 1.6rem;
   border-bottom: 2px solid #000;
   border-right: 2px solid #000;
   transform: rotateZ(45deg);
+  transition: 0.5s;
+}
+
+.hamburger:hover .hamburger--inner::after{
+  transform: rotateZ(30deg);
+  transition: 0.5s;
+  left: -3px;
 }
 
 .hamburger--active .hamburger--inner {
