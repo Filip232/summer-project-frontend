@@ -6,7 +6,7 @@
     </form>
     <div v-if="game.finished" class="gameFinishedMenu">
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
-            <button type="button" class="gamestarter" @click="startGame">
+            <button type="button" class="gameStarter" @click="startGame">
                 Start next game
             </button>
         </div>
@@ -23,19 +23,19 @@
     </div>
     <div v-if="!game.active" class="gameComponent__modal">
         <div v-if="game.owner && game.owner.id === this.$store.state.user.id">
-            <button type="button" class="gamestarter" @click="startGame">
+            <button type="button" class="gameStarter" @click="startGame">
                 Start game
             </button>
         </div>
-        <div class="waitpanel" v-else>
+        <div class="waitPanel" v-else>
             Wait for owner to start game
         </div>
     </div>
     <div id="game" class="gameBox">
         <div
-            v-for="msg in game.messages" :key="msg.id" class="userMesseageBox"
+            v-for="msg in game.messages" :key="msg.id" class="userMessageBox"
             :style="{top: msg.y + '%', left: msg.x + '%'}"
-            :class="{'userMesseageBox--rotate': msg.type === 'ROTATING'}"
+            :class="{'userMessageBox--rotate': msg.type === 'ROTATING'}"
         >
             <h4>{{msg.user.name}}</h4>
             {{msg.text}}
@@ -50,13 +50,6 @@
         </p>
     </div>
     <div>
-        <div class="invisible">
-            <ul>
-                <li>
-                    {{ $store.state.user.name }}
-                </li>
-            </ul>
-        </div>
         <form @submit.prevent="sendMessage" class="sendMessageBox">
             <button type="button" class="hamburger" @click="showHideNavigation">
                 <div class="hamburger--box">
@@ -64,14 +57,14 @@
                 </div>
             </button>
             <div v-if="isNavigationActive" class="navigation">
-                <ul class="navigation-list">
-                    <li class="navigation-list--player">Players</li>
-                    <li class="navigation-list--listElement" v-for="player in game.players" :key="player.index">
+                <ul class="navigationList">
+                    <li class="navigationList--player navigationList--listElement">Players</li>
+                    <li class="navigationList--listElement" v-for="player in game.players" :key="player.index">
                         {{ player.points }}
                         {{ player.user.name }}
                     </li>
-                    <li class="navigation-list--spectator">Spectators</li>
-                    <li class="navigation-list--listElement" v-for="player in game.spectators" :key="player.index">
+                    <li class="navigationList--spectator navigationList--listElement">Spectators</li>
+                    <li class="navigationList--listElement" v-for="player in game.spectators" :key="player.index">
                         {{ player.name }}
                     </li>
                 </ul>

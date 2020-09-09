@@ -83,6 +83,11 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
 }
 
 select {
@@ -97,9 +102,12 @@ a{
 input, textarea{
   border: none;
   background: transparent;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
 }
-
-
 
 .d-flex {
   display: flex;
