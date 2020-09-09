@@ -1,9 +1,4 @@
-$colorPrimary: #fff;
-$colorSecondary: #000;
-$colorGreyLighter: #808080;
-$colorGreyLight: #555;
-$colorGreyDark: #353535;
-$fontSize: 1.6rem;
+@import "variables.scss";
 
 .console {
     height: 100%;
@@ -134,7 +129,7 @@ $fontSize: 1.6rem;
   50% {
     background-color: $colorSecondary;
   }
-  
+
   100% {
     background-color: $colorSecondary;
   }
