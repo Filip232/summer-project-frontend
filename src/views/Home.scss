@@ -17,7 +17,6 @@ $fontSize: 1.6rem;
     background-color: $colorPrimary;
     padding: 0;
 
-  
     &__textarea {
         border: none;
         flex-grow: 1;
@@ -71,19 +70,17 @@ $fontSize: 1.6rem;
         height: 20px;
         animation: blinking-rect 1s;
         animation-iteration-count: infinite;
-    }
 
-    &__prompt::before{
-      width: 2px;
-      height: 100%;
-      content: ' ';
-      background-color: $colorPrimary;
-      display: inline-block;
-      position: relative;
-      transform: translateX(-1px);
+        &::before {
+            width: 2px;
+            height: 100%;
+            content: ' ';
+            background-color: $colorPrimary;
+            display: inline-block;
+            position: relative;
+            transform: translateX(-1px);
+        }
     }
-
-    
 
     &__user {
         margin-right: .5em;
@@ -91,17 +88,16 @@ $fontSize: 1.6rem;
 
     ::-webkit-scrollbar {
         width: 5px;
-      }
-      
-    ::-webkit-scrollbar-thumb {
-        background: $colorGreyLighter; 
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-        background: $colorGreyLight;
+
+        &-thumb {
+            background: $colorGreyLighter;
+
+            &:hover {
+                background: $colorGreyLight;
+            }
+        }
     }
 }
-
 
 @media (prefers-color-scheme: dark) {
     .console {
@@ -119,24 +115,27 @@ $fontSize: 1.6rem;
 
     ::-webkit-scrollbar-thumb {
         background: $colorGreyLight; 
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-        background: $colorGreyDark;
+
+        &:hover {
+            background: $colorGreyDark;
+        }
     }
 }
 
 @keyframes blinking-rect {
   0% {
-    background-color: #fff;
+    background-color: $colorPrimary;
   }
+
   49% {
     background-color: $colorPrimary;
   }
+  
   50% {
     background-color: $colorSecondary;
   }
+  
   100% {
-    background-color: #000;
+    background-color: $colorSecondary;
   }
 }
