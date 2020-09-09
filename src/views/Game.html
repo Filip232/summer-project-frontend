@@ -1,7 +1,7 @@
 <div class="gameComponent">
     <form v-if="$store.state.user.name === ''" class="addNameIfDontExist">
         Enter name before You join
-        <input type="text" v-model="userName" maxlength="20" autofocus autocomplete="off" autocapitalize="off">
+        <input type="text" v-model="userName" maxlength="20" autofocus autocomplete="off" autocapitalize="off" spellcheck="false">
         <button type="submit" @click="changeUserName">Save</button>
     </form>
     <div v-if="game.finished" class="gameFinishedMenu">
@@ -35,8 +35,7 @@
         <div
             v-for="msg in game.messages" :key="msg.id" class="userMessageBox"
             :style="{top: msg.y + '%', left: msg.x + '%'}"
-            :class="{'userMessageBox--rotate': msg.type === 'ROTATING'}"
-        >
+            :class="{'userMessageBox--rotate': msg.type === 'ROTATING'}">
             <h4>{{msg.user.name}}</h4>
             {{msg.text}}
         </div>
@@ -44,8 +43,7 @@
             id="word"
             class="wordGenerator"
             :style="{'margin-top': game.currentWordOptions.y + '%', 'margin-left': game.currentWordOptions.x + '%'}"
-            :class="{'wordGenerator--rotate': game.currentWordType === 'ROTATING'}"
-        >
+            :class="{'wordGenerator--rotate': game.currentWordType === 'ROTATING'}">
             <span v-for="letter in game.currentWord" :key="letter.index">{{letter}}</span>
         </p>
     </div>
@@ -70,7 +68,7 @@
                 </ul>
             </div>
             <input v-model=inputValue type="text" class="sendMessageBox--sendMessage" autofocus autocomplete="off"
-                   autocapitalize="off">
+                   autocapitalize="off" spellcheck="false">
             <button type="submit" class="sendMessageBox--confirm">Confirm</button>
         </form>
     </div>
