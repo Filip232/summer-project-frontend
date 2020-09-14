@@ -199,8 +199,15 @@
       border-bottom: 2px solid $colorSecondary;
       border-right: 2px solid $colorSecondary;
       transform: rotateZ(45deg);
+      transition: 0.5s;
     }
   }
+}
+
+.hamburger:hover .hamburger--inner::after{
+  transform: rotateZ(30deg);
+  left: -3px;
+  transition: 0.5s;
 }
 
 .hamburger--active .hamburger--inner {
