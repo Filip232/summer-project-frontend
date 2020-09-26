@@ -1,11 +1,4 @@
-var AWS = require("aws-sdk");
-
-AWS.config.update({
-  region: "eu-central-1",
-  endpoint: "http://localhost:8000"
-});
-
-var docClient = new AWS.DynamoDB.DocumentClient();
+const { docClient } = require("../api-source/database-init-connection");
 
 console.log("Querying for FRS user.");
 

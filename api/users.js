@@ -1,22 +1,23 @@
-var AWS = require("aws-sdk");
-
-AWS.config.update({
-  region: "eu-central-1",
-  endpoint: "http://localhost:8000"
-});
-
-var docClient = new AWS.DynamoDB.DocumentClient();
+const { docClient } = require("../api-source/database-init-connection");
 
 var table = "users";
 
-var id = 'fkjhfnerjkfjkd'
+var id = Math.round(Math.random()*100000000).toString()
 var name = 'FRdS';
 var stats = {'win': 0,
             'lose': 0};
 
 console.log("Adding a new item.2..");
 
-docClient.query( {
+module.exports = (req, res) => {
+    
+    console.log();
+    
+    if(req.method !== 'POST'){
+        return res.status(405).send("request method not supported");
+    }
+
+    docClient.query( {
     TableName : "users",
     KeyConditionExpression: "#yr = :yyyy",
     ExpressionAttributeNames:{
@@ -41,12 +42,13 @@ docClient.query( {
                 console.error("Unable to add item. Error JSON:", JSON.stringify(err, null, 2));
             } else {
                 console.log("Added item:", JSON.stringify(data, null, 2));
+                res.status(201).send(`{"id": "${id}"}`)
             }
         });
     }else{
         console.error("existing item", data);
-
+        res.status(400).send('{"message": "ERROR"}')
     }
 });
 
-
+}

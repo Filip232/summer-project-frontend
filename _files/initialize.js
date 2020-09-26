@@ -4,7 +4,9 @@ var path = require('path');
 
 AWS.config.update({
     region: "eu-central-1",
-    endpoint: "http://localhost:8000"
+    endpoint: "http://localhost:8000",
+    accessKeyId: 'x',
+    secretAccessKey: 'x'
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient();
