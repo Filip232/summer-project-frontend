@@ -13,7 +13,7 @@ console.log("Importing users into DynamoDB. Please wait.");
 
 console.log(__dirname);
 
-var initializedUsers = JSON.parse(fs.readFileSync(path.join(__dirname, '..' ,'_files', 'initializeusers.json'), 'utf8'));
+var initializedUsers = JSON.parse(fs.readFileSync(path.join(__dirname, 'initializeusers.json'), 'utf8'));
 initializedUsers.forEach(function(user) {
     var params = {
         TableName: "users",

@@ -11,7 +11,7 @@
     "test:unit:watch": "vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint",
     "dev": "next --port $PORT",
-    "initializedb": "node ./api/initialize.js",
+    "initializedb": "node ./_files/initialize.js",
     "start": "vercel dev"
   },
   "dependencies": {
