@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "api/MoviesLoadData.js": {
+            "includeFiles": "_files/**"
+        }
+    }
+}

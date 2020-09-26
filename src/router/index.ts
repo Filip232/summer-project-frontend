@@ -2,7 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import storage from '@/store';
-import Game from "../views/game.vue"
+import Game from "../views/game.vue";
+import Test from "../views/test.vue";
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [
         path: '/game.exe',
         name: 'Game',
         component: Game
+    },
+    {
+        path: '/test',
+        name: 'Test',
+        component: Test
     }
 ]
 

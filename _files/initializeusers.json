@@ -1,0 +1,26 @@
+[
+    {
+        "id": "eeeeee",
+        "name" : "FRS",
+        "stats": {
+            "win": 7,
+            "lose": 2
+        }
+    },
+    {
+        "id": "ffffff",
+        "name" : "Maciek",
+        "stats": {
+            "win": 3,
+            "lose": 8
+        }
+    },
+    {
+        "id": "dddddd",
+        "name" : "Dominik",
+        "stats": {
+            "win": 2,
+            "lose": 5
+        }
+    }   
+]

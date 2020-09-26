@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-clive-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:unit:coverage": "vue-cli-service test:unit --coverage",
     "test:unit:coverage:watch": "vue-cli-service test:unit --coverage --watch",
     "test:unit:watch": "vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint",
-    "dev": "next --port $PORT"
+    "dev": "next --port $PORT",
+    "initializedb": "node ./api/initialize.js"
   },
   "dependencies": {
     "@vercel/node": "^1.8.2",
+    "aws-sdk": "^2.761.0",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vee-validate": "^3.3.7",

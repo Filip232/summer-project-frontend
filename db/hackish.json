@@ -1,0 +1,76 @@
+{
+  "ModelName": "hackish",
+  "ModelMetadata": {
+    "Author": "",
+    "DateCreated": "Sep 26, 2020, 01:18 PM",
+    "DateLastModified": "Sep 26, 2020, 01:43 PM",
+    "Description": "",
+    "Version": "1.0"
+  },
+  "DataModel": [
+    {
+      "TableName": "game",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "id",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "lastUpdate",
+          "AttributeType": "N"
+        },
+        {
+          "AttributeName": "active",
+          "AttributeType": "BOOL"
+        },
+        {
+          "AttributeName": "owner",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "players",
+          "AttributeType": "L"
+        },
+        {
+          "AttributeName": "messages",
+          "AttributeType": "M"
+        },
+        {
+          "AttributeName": "currentWord",
+          "AttributeType": "M"
+        },
+        {
+          "AttributeName": "finished",
+          "AttributeType": "BOOL"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      }
+    },
+    {
+      "TableName": "users",
+      "KeyAttributes": {
+        "PartitionKey": {
+          "AttributeName": "id",
+          "AttributeType": "S"
+        }
+      },
+      "NonKeyAttributes": [
+        {
+          "AttributeName": "name",
+          "AttributeType": "S"
+        },
+        {
+          "AttributeName": "stats",
+          "AttributeType": "M"
+        }
+      ],
+      "DataAccess": {
+        "MySql": {}
+      }
+    }
+  ]
+}
