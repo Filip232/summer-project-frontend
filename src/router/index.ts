@@ -31,22 +31,22 @@ const router = new VueRouter({
     routes
 })
 
-router.beforeEach((to, from, next) => {
-    if ((storage.state.user.id === '')) {
-        return storage.dispatch('createUser')
-            .then(() => next());
-    }
+// router.beforeEach((to, from, next) => {
+//     if ((storage.state.user.id === '')) {
+//         return storage.dispatch('createUser')
+//             .then(() => next());
+//     }
 
-    return storage.dispatch('validateUser')
-        .then(validationResult => {
-            if (validationResult) {
-                return next()
-            } else {
-                return storage.dispatch('createUser')
-                    .then(() => next());
-            }
-        })
-})
+//     return storage.dispatch('validateUser')
+//         .then(validationResult => {
+//             if (validationResult) {
+//                 return next()
+//             } else {
+//                 return storage.dispatch('createUser')
+//                     .then(() => next());
+//             }
+//         })
+// })
 
 
 export default router

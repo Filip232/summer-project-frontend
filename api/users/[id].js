@@ -1,4 +1,4 @@
-const { docClient } = require("../api-source/database-init-connection");
+const { docClient } = require("../../api-source/database-init-connection");
 
 console.log("Querying for FRS user.");
 
